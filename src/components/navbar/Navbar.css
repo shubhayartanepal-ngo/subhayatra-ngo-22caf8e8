@@ -1,0 +1,13 @@
+img#navbar-logo {
+  height: 80px;
+}
+
+.col-wrap-table {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img.navbar-logo {
+  height: 80px;
+}

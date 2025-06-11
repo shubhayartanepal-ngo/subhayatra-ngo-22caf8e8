@@ -1,0 +1,19 @@
+img#footer-logo {
+  height: 120px;
+}
+
+/* * {
+  list-style: none !important;
+  list-style-type: none !important;
+} */
+p {
+  margin-bottom: 12px;
+}
+.qr-code {
+  height: auto;
+  width: 120px;
+  border-radius: 10px;
+}
+#email-link:hover {
+  color: #f26522;
+}
