@@ -5,59 +5,81 @@ const Team = (member) => {
   useSlickSlider(".testi-slider");
   let TopMembers = [
     {
-      name: "Er. Sanjeev Bhandari",
-      roles: [" ", "Principal - Nepathya College"],
-      img: "images/sanjeev.jpg",
+      name: "Madhu Sudan Gaire",
+      roles: ["ेन्द्रिय अध्यक्ष"],
+      img: "images/MADHU-SUDAN-GAIRE.jpg",
       socials: [
         { platform: "twitter", link: "" },
         { platform: "linkedin", link: "" },
         {
           platform: "facebook",
-          link: "https://www.facebook.com/sanjeev.bhandari",
+          link: "",
         },
       ],
     },
     {
-      name: "Er. Sanjeev Bhandari",
-      roles: [" ", "Principal - Nepathya College"],
-      img: "images/sanjeev.jpg",
+      name: "Dipak Lamsal",
+      roles: ["सचिव"],
+      img: "images/Dipak-Lamsal.jpg",
       socials: [
         { platform: "twitter", link: "" },
         { platform: "linkedin", link: "" },
         {
           platform: "facebook",
-          link: "https://www.facebook.com/sanjeev.bhandari",
+          link: "",
         },
       ],
     },
     {
-      name: "Mr. Shiva Bhattrai",
-      roles: ["Member", "Co-Founder: Basiyo, CTO (Bootwal R&D)"],
-      img: "images/ShivaBhattarai.jpg",
+      name: "Badri Pokharel",
+      roles: ["सह सचीव"],
+      img: "images/Badri-Pokharel.jpg",
       socials: [
-        { platform: "twitter", link: "#" },
-        { platform: "linkedin", link: "#" },
-        { platform: "facebook", link: "https://www.facebook.com/civaz" },
+        { platform: "twitter", link: "" },
+        { platform: "linkedin", link: "" },
+        {
+          platform: "facebook",
+          link: "",
+        },
       ],
     },
     {
-      name: "Mr. Shiva Bhattrai",
-      roles: ["Member", "Co-Founder: Basiyo, CTO (Bootwal R&D)"],
-      img: "images/ShivaBhattarai.jpg",
+      name: "Ratna Kandel",
+      roles: ["कोषाध्यक्ष"],
+      img: "images/Ratna-Kandel.jpg",
       socials: [
-        { platform: "twitter", link: "#" },
-        { platform: "linkedin", link: "#" },
-        { platform: "facebook", link: "https://www.facebook.com/civaz" },
+        { platform: "twitter", link: "" },
+        { platform: "linkedin", link: "" },
+        {
+          platform: "facebook",
+          link: "",
+        },
       ],
     },
     {
-      name: "Mr. Shiva Bhattrai",
-      roles: ["Member", "Co-Founder: Basiyo, CTO (Bootwal R&D)"],
-      img: "images/ShivaBhattarai.jpg",
+      name: "-",
+      roles: ["मुक्तिनाथ गैह्रे(रुपन्देही जिल्ला अध्यक्ष )"],
+      img: "images/PHOTO-2025-06-11-12-16-02.jpg",
       socials: [
-        { platform: "twitter", link: "#" },
-        { platform: "linkedin", link: "#" },
-        { platform: "facebook", link: "https://www.facebook.com/civaz" },
+        { platform: "twitter", link: "" },
+        { platform: "linkedin", link: "" },
+        {
+          platform: "facebook",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "-",
+      roles: ["सह सचीव"],
+      img: "images/PHOTO-2025-06-11-12-16-03.jpg",
+      socials: [
+        { platform: "twitter", link: "" },
+        { platform: "linkedin", link: "" },
+        {
+          platform: "facebook",
+          link: "",
+        },
       ],
     },
   ];
@@ -120,114 +142,6 @@ const Team = (member) => {
                       </div>
                     ))}
                   </div>
-
-                  {/* <div className="empty_space_80">
-                    <span className="empty_space_inner"></span>
-                  </div> */}
-
-                  {/* <div className="partner-slider image-carousel text-center" data-show="5" data-arrow="false">
-
-                                    <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo1.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-							        <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo2.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-							        <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo3.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-							        <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo4.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-							        <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo5.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-							        <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo1.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-							        <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo2.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-							        <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo3.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-							        <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo4.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-							        <div>
-							            <div className="partner-item text-center clearfix">
-							                <div className="inner">
-						                        <div className="thumb">
-						                            <img src="images/logo5.png" alt="">
-						                        </div>
-							                </div>
-							            </div>
-							        </div>
-
-                                </div> */}
                 </div>
               </div>
             </div>

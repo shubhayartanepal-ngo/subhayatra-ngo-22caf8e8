@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="main-footer ">
           <div className="container">
             <div className="row">
-              <div className="col-md-3 col-sm-6">
+              <div className="col-md-4 col-sm-6">
                 <div id="media_image-1" className="widget widget_media_image">
                   <Link to="#">
                     <img id="footer-logo" src={clgLogo} alt="" />
@@ -56,7 +56,7 @@ const Footer = () => {
                       <span> {collegeInfo.phoneNumber}</span>
                     </p>
 
-                    <div className="ot-socials bg-white">
+                    <div className="ot-socials ">
                       <Link
                         target="_blank"
                         to={collegeInfo.facebookLink}
@@ -82,52 +82,12 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-md-3 col-sm-6">
-                <section
-                  id="custom_html-2"
-                  className="widget_text widget widget_custom_html padding-left"
-                >
-                  <h4 className="widget-title">Courses</h4>
-                  <div className="textwidget custom-html-widget">
-                    <ul className="padd-left">
-                      <li
-                        className={
-                          location.pathname === "/mba"
-                            ? "current-menu-item"
-                            : ""
-                        }
-                      >
-                        <Link to="/mba">MBA</Link>
-                      </li>
-                      <li
-                        className={
-                          location.pathname === "/bba"
-                            ? "current-menu-item "
-                            : ""
-                        }
-                      >
-                        <Link to="/bba">BBA</Link>
-                      </li>
-                      <li
-                        className={
-                          location.pathname === "/bit"
-                            ? "current-menu-item"
-                            : ""
-                        }
-                      >
-                        <Link to="/bit">BIT (Proposed)</Link>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
-
-              <div className="col-md-3 col-sm-6">
+              <div className="col-md-4 col-sm-6">
                 <section
                   id="custom_html-3"
                   className="widget_text widget widget_custom_html padding-left"
                 >
-                  <h4 className="widget-title">Company</h4>
+                  <h4 className="widget-title">Quick Links</h4>
                   <div className="textwidget custom-html-widget">
                     <ul className="padd-left">
                       <li
@@ -148,6 +108,31 @@ const Footer = () => {
                       </li>
                       <li
                         className={
+                          location.pathname === "/about"
+                            ? "current-menu-item"
+                            : ""
+                        }
+                      >
+                        <Link to="/about">Gallery</Link>
+                      </li>
+                      <li
+                        className={
+                          location.pathname === "/about"
+                            ? "current-menu-item"
+                            : ""
+                        }
+                      >
+                        <Link to="/about"> Achievements</Link>
+                      </li>
+                      <li
+                        className={
+                          location.pathname === "/#" ? "current-menu-item" : ""
+                        }
+                      >
+                        <Link to="/about">Programs</Link>
+                      </li>
+                      <li
+                        className={
                           location.pathname === "/contact"
                             ? "current-menu-item"
                             : ""
@@ -160,13 +145,36 @@ const Footer = () => {
                 </section>
               </div>
 
-              <div className="col-md-3 col-sm-6">
+              <div className="col-md-4 col-sm-6">
                 <section
-                  id="mc4wp_form_widget-1"
+                  id="mc4wp_form_widget-1 px-10"
                   className="widget widget_mc4wp_form_widget"
                 >
-                  <h4 className="widget-title">Get Connected</h4>
-                  <img src={qr} alt="QR Code" className="qr-code m-auto" />
+                  <h4 className="widget-title">Subscribe</h4>
+                  <p>Subscribe To Our Newsletter To Get Our Update News!</p>
+                  <form className="newsletter-form" data-toggle="validator">
+                    <div className="row al-content-center">
+                      <div className="col-7">
+                        <input
+                          type="email"
+                          className="input-newsletter form-control"
+                          placeholder="Your Email"
+                          name="EMAIL"
+                          required
+                          autoComplete="off"
+                        />
+                      </div>
+                      <div className="col-5">
+                        <button className="default-button news-btn">
+                          Subscribe Now
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      id="validator-newsletter"
+                      className="form-result"
+                    ></div>
+                  </form>
                 </section>
               </div>
             </div>

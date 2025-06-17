@@ -19,7 +19,7 @@ export const useSlickSlider = (selector = ".testi-slider") => {
           slidesToScroll: 1,
           arrows: $arr,
           autoplay: true,
-          autoplaySpeed: 6000,
+          autoplaySpeed: 5000,
           adaptiveHeight: true,
           prevArrow:
             '<button type="button" class="prev-nav"><i class="fa fa-angle-left"></i></button>',

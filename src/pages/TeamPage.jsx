@@ -1,6 +1,3 @@
-import React from "react";
-import TopMemberCard from "../components/team/TopMemberCard";
-// import TeamMembers from "../components/team/TeamMember";
 const TeamPage = () => {
   return (
     <>
@@ -36,7 +33,7 @@ const TeamPage = () => {
                             </div>
                           </div>
                         </div>
-                        <TopMemberCard />
+                        <TopMemberCardf />
                       </div>
                     </div>
                     <hr />

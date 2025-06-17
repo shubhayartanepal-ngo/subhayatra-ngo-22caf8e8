@@ -1,7 +1,6 @@
 /* Give space at bottom of slider */
 .testi-slider {
   position: relative;
-  padding-bottom: 70px; /* adjusts space for arrow buttons */
 }
 
 /* Bottom center arrow wrapper */

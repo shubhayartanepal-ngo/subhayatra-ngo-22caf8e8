@@ -14,15 +14,15 @@ import "slick-carousel/slick/slick-theme.css";
 import MainLayout from "./layouts/MainLayout/MainLayout";
 import {
   HomePage,
-  // AboutPage,
-  // MbaPage,
-  // BbaPage,
   Contact,
-  // BitPage,
-  // TeamPage,
   PhotoGallery,
+  BiodiversityProgram,
+  HumanitarianProgram,
+  CowSanctuariesInitiative,
+  CleanerGreenerNepalMovement,
+  TouristRouteDevelopment,
+  VideoGallery,
 } from "./pages";
-// import PhotoGallery from "./pages/gallery/PhotoGallery";
 
 function App() {
   const router = createBrowserRouter(
@@ -31,7 +31,29 @@ function App() {
         {/* Define your routes here */}
         <Route index element={<HomePage />} />
 
+        <Route path="/contact" element={<Contact />} />
         <Route path="/gallery/photo" element={<PhotoGallery />} />
+        <Route path="/gallery/video" element={<VideoGallery />} />
+        <Route
+          path="/programs/biodiversityprogram"
+          element={<BiodiversityProgram />}
+        />
+        <Route
+          path="/programs/humanitarianprogram"
+          element={<HumanitarianProgram />}
+        />
+        <Route
+          path="/programs/cowsanctuariesinitiative"
+          element={<CowSanctuariesInitiative />}
+        />
+        <Route
+          path="/programs/cleanergreenernepalmovement"
+          element={<CleanerGreenerNepalMovement />}
+        />
+        <Route
+          path="/programs/touristroutedevelopment"
+          element={<TouristRouteDevelopment />}
+        />
       </Route>
     )
   );

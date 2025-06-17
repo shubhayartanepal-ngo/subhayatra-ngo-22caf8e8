@@ -2,17 +2,12 @@ const videos = [
   {
     id: 1,
     title: "Introduction to Our Work",
-    src: "/assets/images/gallery/video.mp4",
+    src: "/images/gallery/video.mp4",
   },
   {
     id: 2,
     title: "Community Impact Story",
-    src: "/assets/images/gallery/video1.mp4",
-  },
-  {
-    id: 3,
-    title: "Volunteer Experiences",
-    src: "/assets/videos/video3.mp4",
+    src: "/images/gallery/video1.mp4",
   },
 ];
 
@@ -29,7 +24,7 @@ const VideoGallery = () => {
                   className="w-100 h-100"
                   controls
                   preload="metadata"
-                  poster="/assets/images/video-thumbnail.jpg"
+                  poster="/images/video-thumbnail.jpg"
                 >
                   <source src={video.src} type="video/mp4" />
                   Your browser does not support the video tag.
