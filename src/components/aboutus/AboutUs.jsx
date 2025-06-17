@@ -13,27 +13,27 @@ const AboutUs = () => {
                         <div className="wpb_wrapper">
                           <div class="composition">
                             <img
-                              srcset="/images/heritage.jpg 300w, /images/heritage.jpg 1000w"
+                              srcset="/images/about/heritage.jpg 300w, /images/about/heritage.jpg 1000w"
                               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                               alt="Photo 1"
                               class="composition__photo composition__photo--p1"
-                              src="/images/heritage.jpg"
+                              src="/images/about/heritage.jpg"
                             />
 
                             <img
-                              srcset="/images/heritage.jpg 300w, /images/heritage.jpg 1000w"
+                              srcset="/images/about/heritage.jpg 300w, /images/about/heritage.jpg 1000w"
                               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                               alt="Photo 2"
                               class="composition__photo composition__photo--p2"
-                              src="/images/heritage.jpg"
+                              src="/images/about/heritage.jpg"
                             />
 
                             <img
-                              srcset="/images/heritage.jpg 300w, /images/heritage.jpg 1000w"
+                              srcset="/images/about/heritage.jpg 300w, /images/about/heritage.jpg 1000w"
                               sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                               alt="Photo 3"
                               class="composition__photo composition__photo--p3"
-                              src="/images/heritage.jpg"
+                              src="/images/about/heritage.jpg"
                             />
                           </div>
                         </div>
