@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import clgLogo from "/images/logo.png";
 import "./Footer.css";
-import qr from "/images/qr.png";
 import { Link, useLocation } from "react-router-dom";
 const Footer = () => {
   const location = useLocation();
