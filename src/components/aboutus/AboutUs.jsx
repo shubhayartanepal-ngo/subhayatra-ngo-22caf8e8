@@ -47,28 +47,45 @@ const AboutUs = () => {
                           </div> */}
 
                           <div className="section-head padding-box-2 ">
-                            <h6>
+                            <h2>
                               <span className="">WHO WE ARE</span>
-                            </h6>
-                            <h2 className="section-title">
-                              Empowering Communities, Preserving Heritage
                             </h2>
+                            <h6 className="section-title">
+                              Empowering Communities, Preserving Heritage
+                            </h6>
                           </div>
 
                           <div className="wpb_text_column wpb_content_element padding-box-2 text-dark">
                             <div className="wpb_wrapper">
                               <p>
-                                We are the first institute in our province and
-                                outside the Kathmandu Valley to run an MBA
-                                program. We offered the MBA program of Sikkim
-                                Manipal University from 2011 to 2016, and from
-                                2016 to 2023, we ran the program in affiliation
-                                with Asia Pacific University, Malaysia. Now,
-                                with our experience running MBA programs from
-                                foreign countries, we have taken a leap to apply
-                                our expertise in affiliation with the Central
-                                University of Nepal.
+                                Shubhayatra Nepal is a dedicated organization
+                                working to protect Nepal&apos;s cultural and
+                                natural heritage while uplifting communities
+                                through innovative programs.
                               </p>
+                            </div>
+                            <div className="why-we-text-list">
+                              <i className="flaticon-earth-globe"></i>
+                              <h4>Our Mission:</h4>
+                              <p>
+                                To inspire change by fostering cultural
+                                preservation, environmental conservation, and
+                                sustainable development across Nepal.
+                              </p>
+                              <ul>
+                                <li>
+                                  Preserving Nepal’s cultural and spiritual
+                                  landmarks.
+                                </li>
+                                <li>
+                                  Advancing environmental sustainability through
+                                  clean-up drives and waste management.
+                                </li>
+                                <li>
+                                  Empowering communities with education and
+                                  resources for a better future.
+                                </li>
+                              </ul>
                             </div>
                           </div>
 

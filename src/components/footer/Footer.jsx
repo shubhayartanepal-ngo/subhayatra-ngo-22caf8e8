@@ -55,7 +55,7 @@ const Footer = () => {
                       <span> {collegeInfo.phoneNumber}</span>
                     </p>
 
-                    <div className="ot-socials ">
+                    <div className="ot-socials">
                       <Link
                         target="_blank"
                         to={collegeInfo.facebookLink}
@@ -181,7 +181,7 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <p className="text-center m-0">
-            © <strong>SUNHAYATRA NEPAL</strong> All Rights Reserved By{" "}
+            © <strong>SUBHAYATRA NEPAL</strong> All Rights Reserved By{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"

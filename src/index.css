@@ -565,7 +565,7 @@ a.the-title:hover {
   color: #f26522;
 }
 
-.text-primary-red{
+.text-primary-red {
   color: var(--mainColor);
 }
 
@@ -3530,8 +3530,8 @@ object {
 }
 .ot-socials a:hover {
   color: #fff;
-  background: #f26522;
-  border-color: #f26522;
+  background: var(--mainColor);
+  border-color: var(--mainColor);
 }
 
 .image-carousel {
@@ -5303,8 +5303,8 @@ div.line-chart .chart-legend li {
 }
 .main-footer .ot-socials a:hover {
   color: #fff;
-  background: #f26522;
-  border-color: #f26522;
+  background: var(--mainColor);
+  border-color: var(--mainColor);
 }
 .main-footer a.gray {
   color: rgba(255, 255, 255, 0.5);
