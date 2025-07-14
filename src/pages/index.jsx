@@ -9,3 +9,4 @@ export { default as HumanitarianProgram } from "./programs/HumanitarianProgram";
 export { default as CowSanctuariesInitiative } from "./programs/CowSanctuariesInitiative";
 export { default as CleanerGreenerNepalMovement } from "./programs/CleanerGreenerNepalMovement";
 export { default as TouristRouteDevelopment } from "./programs/TouristRouteDevelopment";
+export { default as NewsDetail } from "./NewsDetail";

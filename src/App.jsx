@@ -22,6 +22,7 @@ import {
   CleanerGreenerNepalMovement,
   TouristRouteDevelopment,
   VideoGallery,
+  NewsDetail,
 } from "./pages";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         {/* Define your routes here */}
         <Route index element={<HomePage />} />
 
+        <Route path="/news/:id" element={<NewsDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery/photo" element={<PhotoGallery />} />
         <Route path="/gallery/video" element={<VideoGallery />} />
