@@ -155,7 +155,7 @@ const PhotoGallery = () => {
             <div key={img.id} className="col-6 col-md-4 col-lg-3  ">
               <div className="position-relative ">
                 <a
-                  href={img.src}  
+                  href={img.src}
                   data-lightbox="gallery"
                   data-title={img.title}
                   className="d-block"
