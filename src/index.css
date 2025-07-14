@@ -430,6 +430,7 @@ h2 {
 
 h3 {
   font-size: 30px;
+  line-height: 1.5;
 }
 
 h4 {
@@ -2871,8 +2872,9 @@ Index 01 Blog Area CSS
 .blog-card .blog-card-text-area h4 {
   margin-top: 18px;
   margin-bottom: 12px;
-  font-size: var(--card-title-fontSize);
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 .blog-card .blog-card-text-area p {
   margin-bottom: 12px;
