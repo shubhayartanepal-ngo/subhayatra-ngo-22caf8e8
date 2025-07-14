@@ -1148,7 +1148,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-  color: #f26522;
+  color: var(--mainColor);
   text-decoration: none;
 }
 a:focus {
