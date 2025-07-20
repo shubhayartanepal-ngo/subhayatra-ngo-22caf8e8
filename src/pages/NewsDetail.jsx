@@ -20,7 +20,7 @@ const NewsDetail = () => {
         ))}
       </div>
       <div>
-        <p className="text-justify text-muted">{newsItem.content}</p>
+        <p className="text-justify text-dark">{newsItem.content}</p>
       </div>
     </section>
   );
