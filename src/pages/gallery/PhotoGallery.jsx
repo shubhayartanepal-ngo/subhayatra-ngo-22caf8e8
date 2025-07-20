@@ -138,6 +138,76 @@ const images = [
   { id: 110, src: "/images/gallery/g110.jpeg", title: "Z.P School, Poshir" },
   { id: 111, src: "/images/gallery/g111.jpeg", title: "Z.P School, Poshir" },
   { id: 112, src: "/images/gallery/g112.jpeg", title: "Z.P School, Poshir" },
+  {
+    id: 113,
+    src: "/images/blog/1.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 114,
+    src: "/images/blog/2.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 115,
+    src: "/images/blog/3.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 116,
+    src: "/images/blog/4.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 117,
+    src: "/images/blog/5.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 118,
+    src: "/images/blog/6.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 119,
+    src: "/images/blog/7.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 120,
+    src: "/images/blog/8.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 121,
+    src: "/images/blog/9.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 122,
+    src: "/images/blog/10.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 123,
+    src: "/images/blog/11.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 124,
+    src: "/images/blog/12.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 125,
+    src: "/images/blog/13.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
+  {
+    id: 126,
+    src: "/images/blog/14.jpeg",
+    title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
+  },
 ];
 
 const PhotoGallery = () => {

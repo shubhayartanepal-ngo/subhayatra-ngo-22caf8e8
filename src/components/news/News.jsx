@@ -26,7 +26,6 @@ const News = () => {
                 </div>
                 <div className="blog-card-text-area p-3">
                   <h4>{newsItem.title}</h4>
-                  <p>{newsItem.summary}</p>
                   <Link to={`/news/${newsItem.id}`} className="mt-3">
                     Read more
                   </Link>

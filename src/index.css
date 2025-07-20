@@ -2842,6 +2842,7 @@ Index 01 Blog Area CSS
 }
 .blog-card .blog-card-img {
   overflow: hidden;
+  height: 250px; /* Fixed height for the image area */
 }
 .blog-card .blog-card-img img {
   width: 100%;
@@ -2869,9 +2870,26 @@ Index 01 Blog Area CSS
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.blog-card-text-area {
+  flex: 1 1 auto; /* Allow text area to take remaining space */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out title and link */
+}
+
+.blog-card-text-area h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit title to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long titles */
+}
 .blog-card .blog-card-text-area h4 {
-  margin-top: 18px;
-  margin-bottom: 12px;
+  margin-top: 12px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
