@@ -9,7 +9,7 @@ const News = () => {
           <h2>Latest News & Updates</h2>
           <h6 className="section-title">
             Stay informed with the latest developments, initiatives, and success
-            stories shaping Nepal's progress and sustainability.
+            stories shaping Nepal progress and sustainability.
           </h6>
         </div>
 
@@ -17,11 +17,14 @@ const News = () => {
           {newsData.map((newsItem) => (
             <div key={newsItem.id} className="col-sm-6 col-md-4 mb-4">
               <div className="blog-card text-left border rounded shadow-sm">
-                <div className="blog-card-img">
+                <div
+                  className="blog-card-img overflow-hidden"
+                  style={{ height: "220px" }}
+                >
                   <img
                     src={newsItem.image[0]}
                     alt={newsItem.title}
-                    className="w-100 h-auto"
+                    className="w-100 h-auto object-cover"
                   />
                 </div>
                 <div className="blog-card-text-area p-3">
