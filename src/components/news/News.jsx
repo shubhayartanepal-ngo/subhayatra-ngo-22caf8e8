@@ -22,7 +22,9 @@ const News = () => {
                   style={{ height: "220px" }}
                 >
                   <img
-                    src={newsItem.image[0]}
+                    src={
+                      newsItem.image ? newsItem.image[0] : "/images/logo.png"
+                    }
                     alt={newsItem.title}
                     className="w-100 h-auto object-cover"
                   />
