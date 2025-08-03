@@ -13,11 +13,17 @@ const NewsDetail = () => {
     <section className="container py-5">
       <h3 className="mb-3">{newsItem.title}</h3>
       <div className="row">
-        {newsItem.image.map((img) => (
-          <div className="col- col-md-6 col-lg-4" key={img}>
-            <img src={img} alt="" className="img-fluid mb-4" />
+        {newsItem.image ? (
+          newsItem.image.map((img) => (
+            <div className="col col-md-6 col-lg-4" key={img}>
+              <img src={img} alt="" className="img-fluid mb-4" />
+            </div>
+          ))
+        ) : (
+          <div className="text-center">
+            <img src="/images/logo.png" alt="" className="mb-4 news-img" />
           </div>
-        ))}
+        )}
       </div>
       <div>
         <p className="text-justify text-dark">{newsItem.content}</p>
