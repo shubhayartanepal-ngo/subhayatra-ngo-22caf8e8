@@ -24,6 +24,7 @@ import {
   VideoGallery,
   NewsDetail,
 } from "./pages";
+import NewsEvents from "./pages/NewsEvents";
 
 function App() {
   const router = createBrowserRouter(
@@ -31,7 +32,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         {/* Define your routes here */}
         <Route index element={<HomePage />} />
-
+        <Route path="/newsevents" element={<NewsEvents />} />
         <Route path="/news/:id" element={<NewsDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery/photo" element={<PhotoGallery />} />
