@@ -11,7 +11,7 @@ const Footer = () => {
   const collegeInfo = {
     address: "Manigram,Tilottama-15,Rupandehi,Nepal",
     phoneNumber: "+977- 9856077385",
-    email: "info@shubhayatra.ngo",
+    email: "shubhayatran@gmail.com",
     facebookLink: "",
     instagramLink: "",
   };

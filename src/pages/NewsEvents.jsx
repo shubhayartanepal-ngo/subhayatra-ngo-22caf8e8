@@ -37,7 +37,9 @@ const NewsEvents = () => {
                   <h4>{newsItem.title}</h4>
                   <p className="text-muted mb-2">{newsItem.date}</p>
                   <Link to={`/news/${newsItem.id}`} className="mt-3">
-                    Read more
+                    Read more console.table("🚀 ~ NewsEvents ~ className:",
+                    className) console.table("🚀 ~ NewsEvents ~ className:",
+                    className)
                   </Link>
                 </div>
               </div>

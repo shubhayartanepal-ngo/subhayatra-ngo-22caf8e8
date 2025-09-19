@@ -6,7 +6,7 @@ const Team = (member) => {
   let TopMembers = [
     {
       name: "Madhu Sudan Gaire",
-      roles: ["ेन्द्रिय अध्यक्ष"],
+      roles: ["केन्द्रिय अध्यक्ष"],
       img: "images/MADHU-SUDAN-GAIRE.jpg",
       socials: [
         { platform: "twitter", link: "" },
@@ -57,8 +57,8 @@ const Team = (member) => {
       ],
     },
     {
-      name: "-",
-      roles: ["मुक्तिनाथ गैह्रे(रुपन्देही जिल्ला अध्यक्ष )"],
+      name: "मुक्तिनाथ गैह्रे",
+      roles: ["रुपन्देही जिल्ला अध्यक्ष"],
       img: "images/PHOTO-2025-06-11-12-16-02.jpg",
       socials: [
         { platform: "twitter", link: "" },
