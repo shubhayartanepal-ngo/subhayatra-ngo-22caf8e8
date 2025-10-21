@@ -11,3 +11,66 @@ img#navbar-logo {
 img.navbar-logo {
   height: 80px;
 }
+
+/* Mobile Dropdown Styles */
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+.dropdown-toggle span {
+  font-weight: 500;
+}
+
+.dropdown-toggle i {
+  transition: transform 0.3s ease;
+  font-size: 12px;
+  color: #666;
+}
+
+.mobile_mainmenu .sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile_mainmenu .sub-menu.show {
+  max-height: 300px;
+}
+
+.mobile_mainmenu .sub-menu li {
+  border-top: 1px solid #e9ecef;
+}
+
+.mobile_mainmenu .sub-menu li:first-child {
+  border-top: none;
+}
+
+.mobile_mainmenu .sub-menu a {
+  padding: 12px 25px;
+  display: block;
+  color: #555;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.mobile_mainmenu .sub-menu a:hover {
+  background-color: #e9ecef;
+  color: #007bff;
+  padding-left: 30px;
+}
