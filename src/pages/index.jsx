@@ -1,7 +1,7 @@
 export { default as HomePage } from "./HomePage";
 
 export { default as Contact } from "./Contact";
-export { default as TeamPage } from "./TeamPage";
+
 
 // About Us pages
 export { default as AboutUs } from "./aboutus/AboutUs";
