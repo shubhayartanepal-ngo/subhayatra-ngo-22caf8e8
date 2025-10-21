@@ -1,32 +1,32 @@
 import React from "react";
 
 const Committee = () => {
-//   const committeeMembers = [
-//     {
-//       id: 1,
-//       name: "John Doe",
-//       position: "Chairman",
-//       description: "Leading the organization with vision and dedication."
-//     },
-//     {
-//       id: 2,
-//       name: "Jane Smith", 
-//       position: "Vice Chairman",
-//       description: "Supporting strategic initiatives and community outreach."
-//     },
-//     {
-//       id: 3,
-//       name: "Michael Johnson",
-//       position: "Secretary",
-//       description: "Managing organizational operations and communications."
-//     },
-//     {
-//       id: 4,
-//       name: "Sarah Williams",
-//       position: "Treasurer",
-//       description: "Overseeing financial management and resource allocation."
-//     }
-//   ];
+  //   const committeeMembers = [
+  //     {
+  //       id: 1,
+  //       name: "John Doe",
+  //       position: "Chairman",
+  //       description: "Leading the organization with vision and dedication."
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "Jane Smith",
+  //       position: "Vice Chairman",
+  //       description: "Supporting strategic initiatives and community outreach."
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "Michael Johnson",
+  //       position: "Secretary",
+  //       description: "Managing organizational operations and communications."
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "Sarah Williams",
+  //       position: "Treasurer",
+  //       description: "Overseeing financial management and resource allocation."
+  //     }
+  //   ];
 
   return (
     <section className="wpb_row row-fluid section-padd bg-light">
@@ -40,9 +40,9 @@ const Committee = () => {
 
         <div className="row justify-content-center mb-4">
           <div className="col-md-6 text-center">
-            <img 
-              src="/images/logo.png" 
-              alt="Subhayatra Committee" 
+            <img
+              src="/images/logo.png"
+              alt="Subhayatra Committee"
               className="img-fluid mb-4"
               style={{ maxWidth: "200px" }}
             />

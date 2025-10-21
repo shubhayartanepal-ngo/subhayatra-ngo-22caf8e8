@@ -48,9 +48,7 @@ const Navbar = () => {
                           <NavLink to="/">About Us</NavLink>
                           <ul className="sub-menu">
                             <li className="menu-item">
-                              <NavLink to="/committee">
-                                Committee
-                              </NavLink>
+                              <NavLink to="/committee">Committee</NavLink>
                             </li>
                             <li className="menu-item">
                               <NavLink to="/advisory">Advisory</NavLink>
@@ -197,9 +195,7 @@ const Navbar = () => {
                     <NavLink to="/award">Award</NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/otherachievement">
-                      Other Achievement
-                    </NavLink>
+                    <NavLink to="/otherachievement">Other Achievement</NavLink>
                   </li>
                 </ul>
               </li>

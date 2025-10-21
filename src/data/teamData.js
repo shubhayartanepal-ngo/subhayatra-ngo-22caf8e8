@@ -29,7 +29,7 @@ const teamData = [
     id: 3,
     name: "Badri Pokharel",
     roles: ["सह सचीव"],
-      img: "images/PHOTO-2025-06-11-12-16-03.jpg",
+    img: "images/PHOTO-2025-06-11-12-16-03.jpg",
     description:
       "Supporting secretarial functions and organizational coordination.",
     socials: [

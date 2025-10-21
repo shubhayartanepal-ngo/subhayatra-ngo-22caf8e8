@@ -1,8 +1,6 @@
 import React from "react";
 
 const Advisory = () => {
-
-
   return (
     <section className="wpb_row row-fluid section-padd bg-light">
       <div className="container">
@@ -15,9 +13,9 @@ const Advisory = () => {
 
         <div className="row justify-content-center mb-4">
           <div className="col-md-6 text-center">
-            <img 
-              src="/images/logo.png" 
-              alt="Subhayatra Advisory" 
+            <img
+              src="/images/logo.png"
+              alt="Subhayatra Advisory"
               className="img-fluid mb-4"
               style={{ maxWidth: "200px" }}
             />
