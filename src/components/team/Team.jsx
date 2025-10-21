@@ -1,88 +1,10 @@
+import teamData from "../../data/teamData";
 import { useSlickSlider } from "../../hooks/useSlickSlider";
 import { Link } from "react-router-dom";
 
 const Team = (member) => {
   useSlickSlider(".testi-slider");
-  let TopMembers = [
-    {
-      name: "Madhu Sudan Gaire",
-      roles: ["केन्द्रिय अध्यक्ष"],
-      img: "images/MADHU-SUDAN-GAIRE.jpg",
-      socials: [
-        { platform: "twitter", link: "" },
-        { platform: "linkedin", link: "" },
-        {
-          platform: "facebook",
-          link: "",
-        },
-      ],
-    },
-    {
-      name: "Dipak Lamsal",
-      roles: ["सचिव"],
-      img: "images/Dipak-Lamsal.jpg",
-      socials: [
-        { platform: "twitter", link: "" },
-        { platform: "linkedin", link: "" },
-        {
-          platform: "facebook",
-          link: "",
-        },
-      ],
-    },
-    {
-      name: "Badri Pokharel",
-      roles: ["सह सचीव"],
-      img: "images/Badri-Pokharel.jpg",
-      socials: [
-        { platform: "twitter", link: "" },
-        { platform: "linkedin", link: "" },
-        {
-          platform: "facebook",
-          link: "",
-        },
-      ],
-    },
-    {
-      name: "Ratna Kandel",
-      roles: ["कोषाध्यक्ष"],
-      img: "images/Ratna-Kandel.jpg",
-      socials: [
-        { platform: "twitter", link: "" },
-        { platform: "linkedin", link: "" },
-        {
-          platform: "facebook",
-          link: "",
-        },
-      ],
-    },
-    {
-      name: "मुक्तिनाथ गैह्रे",
-      roles: ["रुपन्देही जिल्ला अध्यक्ष"],
-      img: "images/PHOTO-2025-06-11-12-16-02.jpg",
-      socials: [
-        { platform: "twitter", link: "" },
-        { platform: "linkedin", link: "" },
-        {
-          platform: "facebook",
-          link: "",
-        },
-      ],
-    },
-    {
-      name: "-",
-      roles: ["सह सचीव"],
-      img: "images/PHOTO-2025-06-11-12-16-03.jpg",
-      socials: [
-        { platform: "twitter", link: "" },
-        { platform: "linkedin", link: "" },
-        {
-          platform: "facebook",
-          link: "",
-        },
-      ],
-    },
-  ];
+
   return (
     <>
       <section className="wpb_row row-fluid section-padd">
@@ -103,7 +25,7 @@ const Team = (member) => {
                   </div>
 
                   <div className="testi-slider" data-show="4" data-arrow="true">
-                    {TopMembers.map((member, index) => (
+                    {teamData.map((member, index) => (
                       <div>
                         <div className="testi-item box-shadow-hover">
                           <div className="member-item radius">
