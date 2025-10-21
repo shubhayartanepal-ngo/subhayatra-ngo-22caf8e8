@@ -1,12 +1,15 @@
-const BiodiversityProgram = () => {
-  return(
+import React from "react";
 
-   <section className="wpb_row row-fluid section-padd bg-light">
+const OtherAchievement = () => {
+
+
+  return (
+    <section className="wpb_row row-fluid section-padd bg-light">
       <div className="container">
         <div className="section-head text-center mb-5">
-          <h2>Biodiversity Program</h2>
+          <h2>Other Achievements</h2>
           <h6 className="section-title">
-           Biodiversity Program page under construction
+            Beyond awards - celebrating our milestones, partnerships, and community impact
           </h6>
         </div>
 
@@ -14,16 +17,17 @@ const BiodiversityProgram = () => {
           <div className="col-md-6 text-center">
             <img 
               src="/images/logo.png" 
-              alt="Subhayatra Biodiversity Program" 
+              alt="Subhayatra Other Achievements" 
               className="img-fluid mb-4"
               style={{ maxWidth: "200px" }}
             />
           </div>
         </div>
-      </div>
-    </section> 
-)
 
+ 
+      </div>
+    </section>
+  );
 };
 
-export default BiodiversityProgram;
+export default OtherAchievement;

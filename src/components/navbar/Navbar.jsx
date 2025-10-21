@@ -45,30 +45,30 @@ const Navbar = () => {
                         </li>
 
                         <li className="menu-item menu-item-has-children">
-                          <NavLink to="/aboutus">About Us</NavLink>
+                          <NavLink to="/">About Us</NavLink>
                           <ul className="sub-menu">
                             <li className="menu-item">
-                              <NavLink to="/aboutus/committee">
+                              <NavLink to="/committee">
                                 Committee
                               </NavLink>
                             </li>
                             <li className="menu-item">
-                              <NavLink to="/aboutus/advisory">Advisory</NavLink>
+                              <NavLink to="/advisory">Advisory</NavLink>
                             </li>
                             <li className="menu-item">
-                              <NavLink to="/aboutus/ourteam">Our Team</NavLink>
+                              <NavLink to="/ourteam">Our Team</NavLink>
                             </li>
                           </ul>
                         </li>
 
                         <li className="menu-item menu-item-has-children">
-                          <NavLink to="/achievements">Achievements</NavLink>
+                          <NavLink to="/">Achievements</NavLink>
                           <ul className="sub-menu">
                             <li className="menu-item">
-                              <NavLink to="/achievements/award">Award</NavLink>
+                              <NavLink to="/award">Award</NavLink>
                             </li>
                             <li className="menu-item">
-                              <NavLink to="/achievements/otherachievement">
+                              <NavLink to="/otherachievement">
                                 Other Achievement
                               </NavLink>
                             </li>
@@ -76,30 +76,30 @@ const Navbar = () => {
                         </li>
 
                         <li className="menu-item menu-item-has-children">
-                          <NavLink to="/programs">Programs</NavLink>
+                          <NavLink to="/">Programs</NavLink>
                           <ul className="sub-menu">
                             <li className="menu-item">
-                              <NavLink to="/programs/biodiversityprogram">
+                              <NavLink to="/biodiversityprogram">
                                 Biodiversity Program
                               </NavLink>
                             </li>
                             <li className="menu-item">
-                              <NavLink to="/programs/humanitarianprogram">
+                              <NavLink to="/humanitarianprogram">
                                 Humanitarian Program
                               </NavLink>
                             </li>
                             <li className="menu-item">
-                              <NavLink to="/programs/cowsanctuariesinitiative">
+                              <NavLink to="/cowsanctuariesinitiative">
                                 Cow Sanctuaries Initiative
                               </NavLink>
                             </li>
                             <li className="menu-item">
-                              <NavLink to="/programs/touristroutedevelopment">
+                              <NavLink to="/touristroutedevelopment">
                                 Tourist Route Development
                               </NavLink>
                             </li>
                             <li className="menu-item">
-                              <NavLink to="/programs/cleanergreenernepalmovement">
+                              <NavLink to="/cleanergreenernepalmovement">
                                 Cleaner Greener Nepal Movement
                               </NavLink>
                             </li>
@@ -107,7 +107,7 @@ const Navbar = () => {
                         </li>
 
                         <li className="menu-item menu-item-has-children">
-                          <NavLink to="/gallery">Gallery</NavLink>
+                          <NavLink to="/">Gallery</NavLink>
                           <ul className="sub-menu">
                             <li className="menu-item">
                               <NavLink to="/gallery/photo">
@@ -176,28 +176,28 @@ const Navbar = () => {
               </li>
 
               <li className="menu-item menu-item-has-children">
-                <NavLink to="/aboutus">About Us</NavLink>
+                <NavLink to="/">About Us</NavLink>
                 <ul className="sub-menu">
                   <li className="menu-item">
-                    <NavLink to="/aboutus/committee">Committee</NavLink>
+                    <NavLink to="/committee">Committee</NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/aboutus/advisory">Advisory</NavLink>
+                    <NavLink to="/advisory">Advisory</NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/aboutus/ourteam">Our Team</NavLink>
+                    <NavLink to="/ourteam">Our Team</NavLink>
                   </li>
                 </ul>
               </li>
 
               <li className="menu-item menu-item-has-children">
-                <NavLink to="/achievements">Achievements</NavLink>
+                <NavLink to="/">Achievements</NavLink>
                 <ul className="sub-menu">
                   <li className="menu-item">
-                    <NavLink to="/achievements/award">Award</NavLink>
+                    <NavLink to="/award">Award</NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/achievements/otherachievement">
+                    <NavLink to="/otherachievement">
                       Other Achievement
                     </NavLink>
                   </li>
@@ -205,30 +205,30 @@ const Navbar = () => {
               </li>
 
               <li className="menu-item menu-item-has-children">
-                <NavLink to="/programs">Programs</NavLink>
+                <NavLink to="/">Programs</NavLink>
                 <ul className="sub-menu">
                   <li className="menu-item">
-                    <NavLink to="/programs/biodiversityprogram">
+                    <NavLink to="/biodiversityprogram">
                       Biodiversity Program
                     </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/programs/humanitarianprogram">
+                    <NavLink to="/humanitarianprogram">
                       Humanitarian Program
                     </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/programs/cowsanctuariesinitiative">
+                    <NavLink to="/cowsanctuariesinitiative">
                       Cow Sanctuaries Initiative
                     </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/programs/touristroutedevelopment">
+                    <NavLink to="/touristroutedevelopment">
                       Tourist Route Development
                     </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/programs/cleanergreenernepalmovement">
+                    <NavLink to="/cleanergreenernepalmovement">
                       Cleaner Greener Nepal Movement
                     </NavLink>
                   </li>

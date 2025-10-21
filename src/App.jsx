@@ -15,12 +15,21 @@ import MainLayout from "./layouts/MainLayout/MainLayout";
 import {
   HomePage,
   Contact,
-  PhotoGallery,
+  AboutUs,
+  Committee,
+  Advisory,
+  OurTeam,
+  Achievements,
+  Award,
+  OtherAchievement,
+  ProgramsMain,
   BiodiversityProgram,
   HumanitarianProgram,
   CowSanctuariesInitiative,
   CleanerGreenerNepalMovement,
   TouristRouteDevelopment,
+  Gallery,
+  PhotoGallery,
   VideoGallery,
   NewsDetail,
 } from "./pages";
@@ -35,28 +44,30 @@ function App() {
         <Route path="/newsevents" element={<NewsEvents />} />
         <Route path="/news/:id" element={<NewsDetail />} />
         <Route path="/contact" element={<Contact />} />
+        
+        {/* About Us routes */}
+        {/* <Route path="/aboutus" element={<AboutUs />} /> */}
+        <Route path="/committee" element={<Committee />} />
+        <Route path="/advisory" element={<Advisory />} />
+        <Route path="/ourteam" element={<OurTeam />} />
+        
+        {/* Achievements routes */}
+        {/* <Route path="/achievements" element={<Achievements />} /> */}
+        <Route path="/award" element={<Award />} />
+        <Route path="/otherachievement" element={<OtherAchievement />} />
+        
+        {/* Programs routes */}
+        {/* <Route path="/programs" element={<ProgramsMain />} /> */}
+        <Route path="/biodiversityprogram" element={<BiodiversityProgram />} />
+        <Route path="/humanitarianprogram" element={<HumanitarianProgram />} />
+        <Route path="/cowsanctuariesinitiative" element={<CowSanctuariesInitiative />} />
+        <Route path="/cleanergreenernepalmovement" element={<CleanerGreenerNepalMovement />} />
+        <Route path="/touristroutedevelopment" element={<TouristRouteDevelopment />} />
+        
+        {/* Gallery routes */}
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/gallery/photo" element={<PhotoGallery />} />
         <Route path="/gallery/video" element={<VideoGallery />} />
-        <Route
-          path="/programs/biodiversityprogram"
-          element={<BiodiversityProgram />}
-        />
-        <Route
-          path="/programs/humanitarianprogram"
-          element={<HumanitarianProgram />}
-        />
-        <Route
-          path="/programs/cowsanctuariesinitiative"
-          element={<CowSanctuariesInitiative />}
-        />
-        <Route
-          path="/programs/cleanergreenernepalmovement"
-          element={<CleanerGreenerNepalMovement />}
-        />
-        <Route
-          path="/programs/touristroutedevelopment"
-          element={<TouristRouteDevelopment />}
-        />
       </Route>
     )
   );
