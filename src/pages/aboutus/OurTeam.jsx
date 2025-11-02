@@ -1,5 +1,6 @@
 import React from "react";
 import teamData from "../../data/teamData";
+import { Link } from "react-router-dom";
 
 const OurTeam = () => {
   return (
@@ -12,21 +13,10 @@ const OurTeam = () => {
           </h6>
         </div>
 
-        <div className="row justify-content-center mb-4">
-          <div className="col-md-6 text-center">
-            <img
-              src="/images/logo.png"
-              alt="Subhayatra Team"
-              className="img-fluid mb-4"
-              style={{ maxWidth: "200px" }}
-            />
-          </div>
-        </div>
-
-        {/* <div className="row">
+        <div className="row">
           {teamData.map((member) => (
             <div key={member.id} className="col-md-6 col-lg-4 mb-4">
-              <div className="team-card text-center p-4 border rounded shadow-sm bg-white h-100">
+              {/* <div className="team-card text-center p-4 border rounded shadow-sm bg-white h-100">
                 <div className="member-image mb-3">
                   <img 
                     src={member.img || "/images/logo.png"}
@@ -44,25 +34,41 @@ const OurTeam = () => {
                     </span>
                   ))}
                 </div>
-                <span className="badge bg-secondary mb-2">{member.department}</span>
-                <p className="member-description text-muted">
-                  {member.description}
-                </p>
-                {member.socials && member.socials.length > 0 && (
-                  <div className="member-socials">
-                    {member.socials.map((social, index) => (
-                      social.link && (
-                        <a key={index} href={social.link} target="_blank" rel="noopener noreferrer" className="me-2">
-                          <i className={`fa fa-${social.platform} text-primary`}></i>
-                        </a>
-                      )
-                    ))}
+        
+              </div> */}
+              <div>
+                <div className="box-shadow-hover team-card text-center border rounded shadow-sm bg-white h-100">
+                  <div className="member-item radius">
+                    <div className="avatar">
+                      <img
+                        src={member.img ? member.img : avatar}
+                        alt={member.name}
+                      />
+                      <span className="overlay"></span>
+                      <div className="social-mem">
+                        {member.socials.map((social, index) => (
+                          <Link key={index} to={social.link} target="_blank">
+                            <i className={`fa fa-${social.platform}`}></i>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="mem-info">
+                      <h5>
+                        {member.name}
+                        {member.roles.map((role, index) => (
+                          <span key={index} className="font12 normal">
+                            {role}
+                          </span>
+                        ))}
+                      </h5>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </section>
   );

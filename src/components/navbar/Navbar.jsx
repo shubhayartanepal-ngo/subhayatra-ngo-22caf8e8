@@ -176,70 +176,115 @@ const Navbar = () => {
           >
             <ul id="menu-main-menu" className="mobile_mainmenu">
               <li className="menu-item">
-                <NavLink to="/" onClick={() => setIsActive(false)}>Home</NavLink>
+                <NavLink to="/" onClick={() => setIsActive(false)}>
+                  Home
+                </NavLink>
               </li>
 
               <li className="menu-item menu-item-has-children">
-                <div className="dropdown-toggle" onClick={() => toggleDropdown('aboutus')}>
+                <div
+                  className="dropdown-toggle"
+                  onClick={() => toggleDropdown("aboutus")}
+                >
                   <span>About Us</span>
                   {/* <i className={`fa fa-chevron-${openDropdown === 'aboutus' ? 'up' : 'down'}`}></i> */}
                 </div>
-                <ul className={`sub-menu ${openDropdown === 'aboutus' ? 'show' : ''}`}>
+                <ul
+                  className={`sub-menu ${openDropdown === "aboutus" ? "show" : ""}`}
+                >
                   <li className="menu-item">
-                    <NavLink to="/committee" onClick={() => setIsActive(false)}>Committee</NavLink>
+                    <NavLink to="/committee" onClick={() => setIsActive(false)}>
+                      Committee
+                    </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/advisory" onClick={() => setIsActive(false)}>Advisory</NavLink>
+                    <NavLink to="/advisory" onClick={() => setIsActive(false)}>
+                      Advisory
+                    </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/ourteam" onClick={() => setIsActive(false)}>Our Team</NavLink>
+                    <NavLink to="/ourteam" onClick={() => setIsActive(false)}>
+                      Our Team
+                    </NavLink>
                   </li>
                 </ul>
               </li>
 
               <li className="menu-item menu-item-has-children">
-                <div className="dropdown-toggle" onClick={() => toggleDropdown('achievements')}>
+                <div
+                  className="dropdown-toggle"
+                  onClick={() => toggleDropdown("achievements")}
+                >
                   <span>Achievements</span>
                   {/* <i className={`fa fa-chevron-${openDropdown === 'achievements' ? 'up' : 'down'}`}></i> */}
                 </div>
-                <ul className={`sub-menu ${openDropdown === 'achievements' ? 'show' : ''}`}>
+                <ul
+                  className={`sub-menu ${openDropdown === "achievements" ? "show" : ""}`}
+                >
                   <li className="menu-item">
-                    <NavLink to="/award" onClick={() => setIsActive(false)}>Award</NavLink>
+                    <NavLink to="/award" onClick={() => setIsActive(false)}>
+                      Award
+                    </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/otherachievement" onClick={() => setIsActive(false)}>Other Achievement</NavLink>
+                    <NavLink
+                      to="/otherachievement"
+                      onClick={() => setIsActive(false)}
+                    >
+                      Other Achievement
+                    </NavLink>
                   </li>
                 </ul>
               </li>
 
               <li className="menu-item menu-item-has-children">
-                <div className="dropdown-toggle" onClick={() => toggleDropdown('programs')}>
+                <div
+                  className="dropdown-toggle"
+                  onClick={() => toggleDropdown("programs")}
+                >
                   <span>Programs</span>
                   {/* <i className={`fa fa-chevron-${openDropdown === 'programs' ? 'up' : 'down'}`}></i> */}
                 </div>
-                <ul className={`sub-menu ${openDropdown === 'programs' ? 'show' : ''}`}>
+                <ul
+                  className={`sub-menu ${openDropdown === "programs" ? "show" : ""}`}
+                >
                   <li className="menu-item">
-                    <NavLink to="/biodiversityprogram" onClick={() => setIsActive(false)}>
+                    <NavLink
+                      to="/biodiversityprogram"
+                      onClick={() => setIsActive(false)}
+                    >
                       Biodiversity Program
                     </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/humanitarianprogram" onClick={() => setIsActive(false)}>
+                    <NavLink
+                      to="/humanitarianprogram"
+                      onClick={() => setIsActive(false)}
+                    >
                       Humanitarian Program
                     </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/cowsanctuariesinitiative" onClick={() => setIsActive(false)}>
+                    <NavLink
+                      to="/cowsanctuariesinitiative"
+                      onClick={() => setIsActive(false)}
+                    >
                       Cow Sanctuaries Initiative
                     </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/touristroutedevelopment" onClick={() => setIsActive(false)}>
+                    <NavLink
+                      to="/touristroutedevelopment"
+                      onClick={() => setIsActive(false)}
+                    >
                       Tourist Route Development
                     </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/cleanergreenernepalmovement" onClick={() => setIsActive(false)}>
+                    <NavLink
+                      to="/cleanergreenernepalmovement"
+                      onClick={() => setIsActive(false)}
+                    >
                       Cleaner Greener Nepal Movement
                     </NavLink>
                   </li>
@@ -247,21 +292,38 @@ const Navbar = () => {
               </li>
 
               <li className="menu-item menu-item-has-children">
-                <div className="dropdown-toggle" onClick={() => toggleDropdown('gallery')}>
+                <div
+                  className="dropdown-toggle"
+                  onClick={() => toggleDropdown("gallery")}
+                >
                   <span>Gallery</span>
                 </div>
-                <ul className={`sub-menu ${openDropdown === 'gallery' ? 'show' : ''}`}>
+                <ul
+                  className={`sub-menu ${openDropdown === "gallery" ? "show" : ""}`}
+                >
                   <li className="menu-item">
-                    <NavLink to="/gallery/photo" onClick={() => setIsActive(false)}>PhotoGallery</NavLink>
+                    <NavLink
+                      to="/gallery/photo"
+                      onClick={() => setIsActive(false)}
+                    >
+                      PhotoGallery
+                    </NavLink>
                   </li>
                   <li className="menu-item">
-                    <NavLink to="/gallery/video" onClick={() => setIsActive(false)}>VideoGallery</NavLink>
+                    <NavLink
+                      to="/gallery/video"
+                      onClick={() => setIsActive(false)}
+                    >
+                      VideoGallery
+                    </NavLink>
                   </li>
                 </ul>
               </li>
 
               <li className="menu-item">
-                <NavLink to="/contact" onClick={() => setIsActive(false)}>Contact</NavLink>
+                <NavLink to="/contact" onClick={() => setIsActive(false)}>
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>
