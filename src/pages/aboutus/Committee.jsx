@@ -42,7 +42,7 @@ const Committee = () => {
           <div className="col-md-6 text-center">
             <img
               src="/images/logo.png"
-              alt="Subhayatra Committee"
+              alt="Shubhayatra Committee"
               className="img-fluid mb-4"
               style={{ maxWidth: "200px" }}
             />

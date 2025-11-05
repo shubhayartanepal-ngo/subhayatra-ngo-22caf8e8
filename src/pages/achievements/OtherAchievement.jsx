@@ -16,7 +16,7 @@ const OtherAchievement = () => {
           <div className="col-md-6 text-center">
             <img
               src="/images/logo.png"
-              alt="Subhayatra Other Achievements"
+              alt="Shubhayatra Other Achievements"
               className="img-fluid mb-4"
               style={{ maxWidth: "200px" }}
             />

@@ -11,7 +11,7 @@ const HumanitarianProgram = () => {
           <div className="col-md-6 text-center">
             <img
               src="/images/logo.png"
-              alt="Subhayatra Humanitarian Program"
+              alt="Shubhayatra Humanitarian Program"
               className="img-fluid mb-4"
               style={{ maxWidth: "200px" }}
             />

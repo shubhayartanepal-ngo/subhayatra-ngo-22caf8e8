@@ -193,7 +193,7 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <p className="text-center m-0">
-            © <strong>SUBHAYATRA NEPAL</strong> All Rights Reserved By{" "}
+            © <strong>SHUBHAYATRA NEPAL</strong> All Rights Reserved By{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
