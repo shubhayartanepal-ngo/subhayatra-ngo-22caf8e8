@@ -208,6 +208,636 @@ const images = [
     src: "/images/blog/14.jpeg",
     title: "शुभयात्रा नेपाल मणिग्रामको प्रथम वार्षिकोत्सव",
   },
+  {
+    id: 127,
+    src: "/images/gallery/ward10/IMG-20251230-WA0004.jpg",
+    title: "Ward 10 Community",
+  },
+  {
+    id: 128,
+    src: "/images/gallery/ward10/IMG-20251230-WA0010.jpg",
+    title: "Ward 10 Community",
+  },
+  {
+    id: 129,
+    src: "/images/gallery/ward10/IMG-20251230-WA0012.jpg",
+    title: "Ward 10 Community",
+  },
+  {
+    id: 130,
+    src: "/images/gallery/ward10/IMG-20251230-WA0016.jpg",
+    title: "Ward 10 Community",
+  },
+  {
+    id: 131,
+    src: "/images/gallery/ward10/IMG-20251230-WA0024.jpg",
+    title: "Ward 10 Community",
+  },
+  {
+    id: 132,
+    src: "/images/gallery/ward10/IMG-20251230-WA0028.jpg",
+    title: "Ward 10 Community",
+  },
+  {
+    id: 133,
+    src: "/images/gallery/ward10/IMG-20251230-WA0035.jpg",
+    title: "Ward 10 Community",
+  },
+  {
+    id: 134,
+    src: "/images/gallery/ward11/IMG-20260103-WA0004.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 135,
+    src: "/images/gallery/ward11/IMG-20260103-WA0018.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 136,
+    src: "/images/gallery/ward11/IMG-20260103-WA0022.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 137,
+    src: "/images/gallery/ward11/IMG-20260103-WA0026.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 138,
+    src: "/images/gallery/ward11/IMG-20260103-WA0030.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 139,
+    src: "/images/gallery/ward11/IMG-20260103-WA0034.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 140,
+    src: "/images/gallery/ward11/IMG-20260103-WA0039.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 141,
+    src: "/images/gallery/ward11/IMG-20260103-WA0044.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 142,
+    src: "/images/gallery/ward11/motion_photo_661084202163972421.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 143,
+    src: "/images/gallery/ward11/motion_photo_9014239797630874019.jpg",
+    title: "Ward 11 Community",
+  },
+  {
+    id: 144,
+    src: "/images/gallery/ward12/Messenger_creation_3B61AF74-D7D7-4EF9-810A-7D668F2F5331.jpeg",
+    title: "Ward 12 Community",
+  },
+  {
+    id: 145,
+    src: "/images/gallery/ward12/Messenger_creation_4CCB9BD2-3551-49E0-911D-719E1B0E5590.jpeg",
+    title: "Ward 12 Community",
+  },
+  {
+    id: 146,
+    src: "/images/gallery/ward12/Messenger_creation_93BB278E-BD4C-43AB-9C39-986BA28BD82B - Copy.jpeg",
+    title: "Ward 12 Community",
+  },
+  {
+    id: 147,
+    src: "/images/gallery/ward14/20260117_191707.jpg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 148,
+    src: "/images/gallery/ward14/Messenger_creation_084C7AEA-E560-49EB-9B54-034ED68FA652.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 149,
+    src: "/images/gallery/ward14/Messenger_creation_0BAB6ECD-432B-486E-A7C3-3B0475F00A3D.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 150,
+    src: "/images/gallery/ward14/Messenger_creation_0CE46F5D-6A8B-4741-9860-246753D2912E.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 151,
+    src: "/images/gallery/ward14/Messenger_creation_2AB0F517-9D82-4413-B4F6-EFF1DF242AC5.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 152,
+    src: "/images/gallery/ward14/Messenger_creation_6AA09CA5-270B-483E-A768-936BCB579A03.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 153,
+    src: "/images/gallery/ward14/Messenger_creation_6CB53CC4-D8E1-45BA-8114-4FC2BCF99F4D.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 154,
+    src: "/images/gallery/ward14/Messenger_creation_87C9CB20-9AF5-45AB-A4D3-10CA1F3395B1.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 155,
+    src: "/images/gallery/ward14/Messenger_creation_9B0BB5FA-50F7-4CE6-A6A4-7EEF8C6639AA.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 156,
+    src: "/images/gallery/ward14/Messenger_creation_A14D005D-CD34-4F52-9B99-B224CC5734C1.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 157,
+    src: "/images/gallery/ward14/Messenger_creation_A9261083-2700-4653-836A-0E60F28B1610.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 158,
+    src: "/images/gallery/ward14/received_1658226165143733.jpeg",
+    title: "Ward 14 Community",
+  },
+  {
+    id: 159,
+    src: "/images/gallery/ward16/Messenger_creation_232345C2-1830-4079-BA5D-D2777FE65266.jpeg",
+    title: "Ward 16 Community",
+  },
+  {
+    id: 160,
+    src: "/images/gallery/ward16/Messenger_creation_4FC589D4-CE24-4A21-AC23-11A554B98EA9.jpeg",
+    title: "Ward 16 Community",
+  },
+  {
+    id: 161,
+    src: "/images/gallery/ward16/Messenger_creation_5A125F7A-A438-4007-8CF9-FA47CB40C7E0.jpeg",
+    title: "Ward 16 Community",
+  },
+  {
+    id: 162,
+    src: "/images/gallery/ward16/Messenger_creation_71BFC225-C57E-4A5C-8F11-4F68C9810D32.jpeg",
+    title: "Ward 16 Community",
+  },
+  {
+    id: 163,
+    src: "/images/gallery/ward16/Messenger_creation_9F9033E1-E4C8-49D9-9933-A9F29908802B.jpeg",
+    title: "Ward 16 Community",
+  },
+  {
+    id: 164,
+    src: "/images/gallery/ward16/Messenger_creation_C748924E-92A6-4580-8503-ACCDCBD01D1D.jpeg",
+    title: "Ward 16 Community",
+  },
+  {
+    id: 165,
+    src: "/images/gallery/ward16/Messenger_creation_EF89B1A0-67DE-4226-8B8F-D4D5C16D6502.jpeg",
+    title: "Ward 16 Community",
+  },
+  {
+    id: 166,
+    src: "/images/gallery/ward6/WhatsApp Image 2025-12-13 at 16.09.51.jpeg",
+    title: "Ward 6 Community",
+  },
+  {
+    id: 167,
+    src: "/images/gallery/ward6/WhatsApp Image 2025-12-13 at 17.22.37.jpeg",
+    title: "Ward 6 Community",
+  },
+  {
+    id: 168,
+    src: "/images/gallery/ward6/WhatsApp Image 2025-12-13 at 17.22.40 (1).jpeg",
+    title: "Ward 6 Community",
+  },
+  {
+    id: 169,
+    src: "/images/gallery/ward6/WhatsApp Image 2025-12-13 at 17.22.40.jpeg",
+    title: "Ward 6 Community",
+  },
+  {
+    id: 170,
+    src: "/images/gallery/ward6/WhatsApp Image 2025-12-13 at 17.22.45 (1).jpeg",
+    title: "Ward 6 Community",
+  },
+  {
+    id: 171,
+    src: "/images/gallery/ward6/WhatsApp Image 2025-12-13 at 17.22.45.jpeg",
+    title: "Ward 6 Community",
+  },
+  {
+    id: 172,
+    src: "/images/gallery/ward6/WhatsApp Image 2025-12-13 at 17.22.47 (2).jpeg",
+    title: "Ward 6 Community",
+  },
+  {
+    id: 173,
+    src: "/images/gallery/ward6/WhatsApp Image 2025-12-13 at 17.22.47.jpeg",
+    title: "Ward 6 Community",
+  },
+  {
+    id: 174,
+    src: "/images/gallery/wardno13/1770527656790.jpg",
+    title: "Ward 13 Community",
+  },
+  {
+    id: 175,
+    src: "/images/gallery/wardno13/Messenger_creation_1D2E1E72-1C96-48C5-B8E8-3B938EC287B8.jpeg",
+    title: "Ward 13 Community",
+  },
+  {
+    id: 176,
+    src: "/images/gallery/wardno13/Messenger_creation_28DC4B79-65AC-4621-AB58-70C6CC07C486.jpeg",
+    title: "Ward 13 Community",
+  },
+  {
+    id: 177,
+    src: "/images/gallery/wardno13/Messenger_creation_2BB9D77A-1519-4E61-89F7-F5487B0D8248.jpeg",
+    title: "Ward 13 Community",
+  },
+  {
+    id: 178,
+    src: "/images/gallery/wardno13/Messenger_creation_4D555CFF-8E59-4D8E-8E77-20728A9B3AA9.jpeg",
+    title: "Ward 13 Community",
+  },
+  {
+    id: 179,
+    src: "/images/gallery/wardno13/Messenger_creation_6D126417-F9F4-46B1-9A94-205C17EFF5CF.jpeg",
+    title: "Ward 13 Community",
+  },
+  {
+    id: 180,
+    src: "/images/gallery/wardno13/Messenger_creation_9A3B2D11-BA7C-45D3-8BA9-0B6994DBDC4A.jpeg",
+    title: "Ward 13 Community",
+  },
+  {
+    id: 181,
+    src: "/images/gallery/wardno13/Messenger_creation_E2CA21B8-C018-4D3D-BDD6-FEF2E30B8254.jpeg",
+    title: "Ward 13 Community",
+  },
+  {
+    id: 182,
+    src: "/images/gallery/wardno13/Messenger_creation_F1AF9B46-8A78-4B68-9A1D-E8CF5B039EC3.jpeg",
+    title: "Ward 13 Community",
+  },
+  {
+    id: 183,
+    src: "/images/gallery/wardno15/Messenger_creation_34300B87-720E-4266-A245-6B3EDA68AA09.jpeg",
+    title: "Ward 15 Community",
+  },
+  {
+    id: 184,
+    src: "/images/gallery/wardno15/Messenger_creation_5F218B29-0B79-4F4C-B95A-9B77E7673627.jpeg",
+    title: "Ward 15 Community",
+  },
+  {
+    id: 185,
+    src: "/images/gallery/wardno15/Messenger_creation_606D4464-8904-4377-B01F-6EF56F90C625.jpeg",
+    title: "Ward 15 Community",
+  },
+  {
+    id: 186,
+    src: "/images/gallery/wardno15/Messenger_creation_8E98A9A1-9434-4127-AB36-0EF07F51B364.jpeg",
+    title: "Ward 15 Community",
+  },
+  {
+    id: 187,
+    src: "/images/gallery/wardno15/Messenger_creation_A5FC26FD-A939-41AD-812C-10A7AED04623.jpeg",
+    title: "Ward 15 Community",
+  },
+  {
+    id: 188,
+    src: "/images/gallery/wardno15/Messenger_creation_CCC896B9-F6D2-4E41-A4AF-E98AA1402E82.jpeg",
+    title: "Ward 15 Community",
+  },
+  {
+    id: 189,
+    src: "/images/gallery/wardno2/Messenger_creation_179D085D-AF0D-4AD1-A42A-008334D70033.jpeg",
+    title: "Ward 2 Community",
+  },
+  {
+    id: 190,
+    src: "/images/gallery/wardno2/WhatsApp Image 2025-11-22 at 18.08.50.jpeg",
+    title: "Ward 2 Community",
+  },
+  {
+    id: 191,
+    src: "/images/gallery/wardno2/WhatsApp Image 2025-11-22 at 18.08.53.jpeg",
+    title: "Ward 2 Community",
+  },
+  {
+    id: 192,
+    src: "/images/gallery/wardno2/WhatsApp Image 2025-11-22 at 18.08.54.jpeg",
+    title: "Ward 2 Community",
+  },
+  {
+    id: 193,
+    src: "/images/gallery/wardno2/WhatsApp Image 2025-11-22 at 18.08.55 (1).jpeg",
+    title: "Ward 2 Community",
+  },
+  {
+    id: 194,
+    src: "/images/gallery/wardno2/WhatsApp Image 2025-11-22 at 18.08.55 (2).jpeg",
+    title: "Ward 2 Community",
+  },
+  {
+    id: 195,
+    src: "/images/gallery/wardno3/motion_photo_1093750365938206583.jpg",
+    title: "Ward 3 Community",
+  },
+  {
+    id: 196,
+    src: "/images/gallery/wardno3/motion_photo_1274059104263688560.jpg",
+    title: "Ward 3 Community",
+  },
+  {
+    id: 197,
+    src: "/images/gallery/wardno3/motion_photo_2069457636539652107.jpg",
+    title: "Ward 3 Community",
+  },
+  {
+    id: 198,
+    src: "/images/gallery/wardno3/motion_photo_2081068529130342037.jpg",
+    title: "Ward 3 Community",
+  },
+  {
+    id: 199,
+    src: "/images/gallery/wardno3/motion_photo_227747819350959265.jpg",
+    title: "Ward 3 Community",
+  },
+  {
+    id: 200,
+    src: "/images/gallery/wardno3/motion_photo_6118751930955407709.jpg",
+    title: "Ward 3 Community",
+  },
+  {
+    id: 201,
+    src: "/images/gallery/wardno3/motion_photo_7240737816921983134.jpg",
+    title: "Ward 3 Community",
+  },
+  {
+    id: 202,
+    src: "/images/gallery/wardno3/motion_photo_7476887189354862418 - Copy.jpg",
+    title: "Ward 3 Community",
+  },
+  {
+    id: 203,
+    src: "/images/gallery/wardno3/motion_photo_987305521499813777.jpg",
+    title: "Ward 3 Community",
+  },
+  {
+    id: 204,
+    src: "/images/gallery/wardno4/IMG-20251204-WA0017(1).jpg",
+    title: "Ward 4 Community",
+  },
+  {
+    id: 205,
+    src: "/images/gallery/wardno4/IMG-20251204-WA0018.jpg",
+    title: "Ward 4 Community",
+  },
+  {
+    id: 206,
+    src: "/images/gallery/wardno4/IMG-20251204-WA0026.jpg",
+    title: "Ward 4 Community",
+  },
+  {
+    id: 207,
+    src: "/images/gallery/wardno4/IMG-20251204-WA0029.jpg",
+    title: "Ward 4 Community",
+  },
+  {
+    id: 208,
+    src: "/images/gallery/wardno4/IMG-20251204-WA0033.jpg",
+    title: "Ward 4 Community",
+  },
+  {
+    id: 209,
+    src: "/images/gallery/wardno4/IMG-20251204-WA0037.jpg",
+    title: "Ward 4 Community",
+  },
+  {
+    id: 210,
+    src: "/images/gallery/wardno4/IMG-20251204-WA0039.jpg",
+    title: "Ward 4 Community",
+  },
+  {
+    id: 211,
+    src: "/images/gallery/wardno4/IMG-20251205-WA0054.jpg",
+    title: "Ward 4 Community",
+  },
+  {
+    id: 212,
+    src: "/images/gallery/wardno4/motion_photo_7494771385856627014.jpg",
+    title: "Ward 4 Community",
+  },
+  {
+    id: 213,
+    src: "/images/gallery/wardno5/IMG-20251206-WA0008.jpg",
+    title: "Ward 5 Community",
+  },
+  {
+    id: 214,
+    src: "/images/gallery/wardno5/IMG-20251206-WA0033.jpg",
+    title: "Ward 5 Community",
+  },
+  {
+    id: 215,
+    src: "/images/gallery/wardno5/IMG-20251206-WA0073.jpg",
+    title: "Ward 5 Community",
+  },
+  {
+    id: 216,
+    src: "/images/gallery/wardno5/IMG-20251206-WA0077(1).jpg",
+    title: "Ward 5 Community",
+  },
+  {
+    id: 217,
+    src: "/images/gallery/wardno5/IMG-20251206-WA0087.jpg",
+    title: "Ward 5 Community",
+  },
+  {
+    id: 218,
+    src: "/images/gallery/wardno5/IMG-20251206-WA0105.jpg",
+    title: "Ward 5 Community",
+  },
+  {
+    id: 219,
+    src: "/images/gallery/wardno5/IMG-20251206-WA0111.jpg",
+    title: "Ward 5 Community",
+  },
+  {
+    id: 220,
+    src: "/images/gallery/wardno7/WhatsApp Image 2025-12-25 at 16.57.43.jpeg",
+    title: "Ward 7 Community",
+  },
+  {
+    id: 221,
+    src: "/images/gallery/wardno7/WhatsApp Image 2025-12-25 at 16.57.45.jpeg",
+    title: "Ward 7 Community",
+  },
+  {
+    id: 222,
+    src: "/images/gallery/wardno7/WhatsApp Image 2025-12-25 at 16.59.02.jpeg",
+    title: "Ward 7 Community",
+  },
+  {
+    id: 223,
+    src: "/images/gallery/wardno7/WhatsApp Image 2025-12-25 at 16.59.03.jpeg",
+    title: "Ward 7 Community",
+  },
+  {
+    id: 224,
+    src: "/images/gallery/wardno7/WhatsApp Image 2025-12-25 at 17.00.19.jpeg",
+    title: "Ward 7 Community",
+  },
+  {
+    id: 225,
+    src: "/images/gallery/wardno7/WhatsApp Image 2025-12-25 at 17.00.21.jpeg",
+    title: "Ward 7 Community",
+  },
+  {
+    id: 226,
+    src: "/images/gallery/wardno7/WhatsApp Image 2025-12-25 at 17.00.23 (1).jpeg",
+    title: "Ward 7 Community",
+  },
+  {
+    id: 227,
+    src: "/images/gallery/wardno9/Messenger_creation_0A7FA7CA-6509-47BC-8424-D1760095831C.jpeg",
+    title: "Ward 9 Community",
+  },
+  {
+    id: 228,
+    src: "/images/gallery/wardno9/Messenger_creation_132E272B-995A-4DE2-A901-FF49FB38CC51.jpeg",
+    title: "Ward 9 Community",
+  },
+  {
+    id: 229,
+    src: "/images/gallery/wardno9/Messenger_creation_6F7319C4-B19C-45AE-869B-0C99BE50B771.jpeg",
+    title: "Ward 9 Community",
+  },
+  {
+    id: 230,
+    src: "/images/gallery/wardno9/Messenger_creation_8A5BABE8-BC0A-4FA7-AC9C-42B1D17AD2C6.jpeg",
+    title: "Ward 9 Community",
+  },
+  {
+    id: 231,
+    src: "/images/gallery/wardno9/Messenger_creation_B9B27D83-2541-4673-986C-FABB23420215.jpeg",
+    title: "Ward 9 Community",
+  },
+  {
+    id: 232,
+    src: "/images/gallery/wardno9/Messenger_creation_D550912C-9A35-4756-83EC-B05D89FE434D.jpeg",
+    title: "Ward 9 Community",
+  },
+  {
+    id: 233,
+    src: "/images/gallery/wardno9/Messenger_creation_FB1A828F-BD9E-450C-AC5D-8F3CD96C34B2.jpeg",
+    title: "Ward 9 Community",
+  },
+  {
+    id: 234,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_020D336B-2952-4A57-ABF0-F31CA711C377.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 235,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_0B00F362-D386-4467-B9C2-05E528701A91.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 236,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_22A2D77D-7B21-46B7-B28D-037E89FFC8CD.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 237,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_369AF999-395B-4E51-86C2-8D16BBADCB2B.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 238,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_447BA6A6-50DF-454D-98D8-9A47EEDFEA99.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 239,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_617DF11B-1AAB-4128-A77E-48F9532EE5F5.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 240,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_6346E602-E492-4BD1-92AD-BCE3173F3E96.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 241,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_6F7CDD71-FF71-43A3-B864-0317B307A34A.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 242,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_8CC0CCB5-7FCE-4157-B22D-11A219B1EC55.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 243,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_E473150A-A630-4EA3-A4B6-733A26E037D5.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 244,
+    src: "/images/gallery/fwdgoodleadershiporatorycpmpitionfinal/Messenger_creation_E5D50381-382B-4404-BE23-85E959EE3E2B.jpeg",
+    title: "Good Leadership Oratory Competition",
+  },
+  {
+    id: 245,
+    src: "/images/gallery/fwdshubhayatranepalwardno_1goodleadershiporatotyco/IMG-20251115-WA0011.jpg",
+    title: "Shubhayatra Nepal Ward No. 1 Good Leadership Oratory",
+  },
+  {
+    id: 246,
+    src: "/images/gallery/fwdshubhayatranepalwardno_1goodleadershiporatotyco/IMG-20251115-WA0015.jpg",
+    title: "Shubhayatra Nepal Ward No. 1 Good Leadership Oratory",
+  },
+  {
+    id: 247,
+    src: "/images/gallery/fwdshubhayatranepalwardno_1goodleadershiporatotyco/IMG-20251115-WA0022(1).jpg",
+    title: "Shubhayatra Nepal Ward No. 1 Good Leadership Oratory",
+  },
+  {
+    id: 248,
+    src: "/images/gallery/fwdshubhayatranepalwardno_1goodleadershiporatotyco/IMG-20251115-WA0022.jpg",
+    title: "Shubhayatra Nepal Ward No. 1 Good Leadership Oratory",
+  },
+  {
+    id: 249,
+    src: "/images/gallery/fwdshubhayatranepalwardno_1goodleadershiporatotyco/IMG-20251115-WA0025.jpg",
+    title: "Shubhayatra Nepal Ward No. 1 Good Leadership Oratory",
+  },
+  {
+    id: 250,
+    src: "/images/gallery/fwdshubhayatranepalwardno_1goodleadershiporatotyco/IMG-20251115-WA0028(1).jpg",
+    title: "Shubhayatra Nepal Ward No. 1 Good Leadership Oratory",
+  },
+  {
+    id: 251,
+    src: "/images/gallery/fwdshubhayatranepalwardno_1goodleadershiporatotyco/IMG-20251115-WA0032.jpg",
+    title: "Shubhayatra Nepal Ward No. 1 Good Leadership Oratory",
+  },
+  {
+    id: 252,
+    src: "/images/gallery/fwdshubhayatranepalwardno_1goodleadershiporatotyco/IMG-20251115-WA0034(1).jpg",
+    title: "Shubhayatra Nepal Ward No. 1 Good Leadership Oratory",
+  },
 ];
 
 const PhotoGallery = () => {
