@@ -12,6 +12,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import MainLayout from "./layouts/MainLayout/MainLayout";
+import Dashboard from "./dashboard/Dashboard";
+import DashboardOverview from "./dashboard/DashboardOverview";
+import DashboardUsers from "./dashboard/DashboardUsers";
+import DashboardEvents from "./dashboard/DashboardEvents";
+import DashboardNews from "./dashboard/DashboardNews";
+import DashboardGallery from "./dashboard/DashboardGallery";
+import DashboardPrograms from "./dashboard/DashboardPrograms";
+import DashboardReports from "./dashboard/DashboardReports";
+import DashboardSettings from "./dashboard/DashboardSettings";
+import DashboardProfile from "./dashboard/DashboardProfile";
 import {
   HomePage,
   Contact,
@@ -28,52 +38,78 @@ import {
   PhotoGallery,
   VideoGallery,
   NewsDetail,
+  Login,
 } from "./pages";
 import NewsEvents from "./pages/NewsEvents";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<MainLayout />}>
-        {/* Define your routes here */}
-        <Route index element={<HomePage />} />
-        <Route path="/newsevents" element={<NewsEvents />} />
-        <Route path="/news/:id" element={<NewsDetail />} />
-        <Route path="/contact" element={<Contact />} />
+      <>
+        {/* Login route - standalone, no MainLayout */}
+        <Route path="/login" element={<Login />} />
 
-        {/* About Us routes */}
+        {/* Dashboard routes - standalone with Dashboard layout */}
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route index element={<DashboardOverview />} />
+          {/* <Route path="users" element={<DashboardUsers />} /> */}
+          <Route path="events" element={<DashboardEvents />} />
+          <Route path="news" element={<DashboardNews />} />
+          <Route path="gallery" element={<DashboardGallery />} />
+          <Route path="programs" element={<DashboardPrograms />} />
+          <Route path="reports" element={<DashboardReports />} />
+          <Route path="settings" element={<DashboardSettings />} />
+          <Route path="profile" element={<DashboardProfile />} />
+        </Route>
 
-        <Route path="/committee" element={<Committee />} />
-        <Route path="/advisory" element={<Advisory />} />
-        <Route path="/ourteam" element={<OurTeam />} />
+        {/* Main routes with MainLayout wrapper */}
+        <Route path="/" element={<MainLayout />}>
+          {/* Define your routes here */}
+          <Route index element={<HomePage />} />
+          <Route path="/newsevents" element={<NewsEvents />} />
+          <Route path="/news/:id" element={<NewsDetail />} />
+          <Route path="/contact" element={<Contact />} />
 
-        {/* Achievements routes */}
+          {/* About Us routes */}
 
-        <Route path="/award" element={<Award />} />
-        <Route path="/otherachievement" element={<OtherAchievement />} />
+          <Route path="/committee" element={<Committee />} />
+          <Route path="/advisory" element={<Advisory />} />
+          <Route path="/ourteam" element={<OurTeam />} />
 
-        {/* Programs routes */}
+          {/* Achievements routes */}
 
-        <Route path="/biodiversityprogram" element={<BiodiversityProgram />} />
-        <Route path="/humanitarianprogram" element={<HumanitarianProgram />} />
-        <Route
-          path="/cowsanctuariesinitiative"
-          element={<CowSanctuariesInitiative />}
-        />
-        <Route
-          path="/cleanergreenernepalmovement"
-          element={<CleanerGreenerNepalMovement />}
-        />
-        <Route
-          path="/touristroutedevelopment"
-          element={<TouristRouteDevelopment />}
-        />
+          <Route path="/award" element={<Award />} />
+          <Route path="/otherachievement" element={<OtherAchievement />} />
 
-        {/* Gallery routes */}
+          {/* Programs routes */}
 
-        <Route path="/gallery/photo" element={<PhotoGallery />} />
-        <Route path="/gallery/video" element={<VideoGallery />} />
-      </Route>
+          <Route
+            path="/biodiversityprogram"
+            element={<BiodiversityProgram />}
+          />
+          <Route
+            path="/humanitarianprogram"
+            element={<HumanitarianProgram />}
+          />
+          <Route
+            path="/cowsanctuariesinitiative"
+            element={<CowSanctuariesInitiative />}
+          />
+          <Route
+            path="/cleanergreenernepalmovement"
+            element={<CleanerGreenerNepalMovement />}
+          />
+          <Route
+            path="/touristroutedevelopment"
+            element={<TouristRouteDevelopment />}
+          />
+
+          {/* Gallery routes */}
+
+          <Route path="/gallery/photo" element={<PhotoGallery />} />
+          <Route path="/gallery/video" element={<VideoGallery />} />
+        </Route>
+      </>
     )
   );
 
