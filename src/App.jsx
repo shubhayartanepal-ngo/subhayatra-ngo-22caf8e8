@@ -15,12 +15,17 @@ import MainLayout from "./layouts/MainLayout/MainLayout";
 import {
   HomePage,
   Contact,
-  PhotoGallery,
+  Committee,
+  Advisory,
+  OurTeam,
+  Award,
+  OtherAchievement,
   BiodiversityProgram,
   HumanitarianProgram,
   CowSanctuariesInitiative,
   CleanerGreenerNepalMovement,
   TouristRouteDevelopment,
+  PhotoGallery,
   VideoGallery,
   NewsDetail,
 } from "./pages";
@@ -35,28 +40,39 @@ function App() {
         <Route path="/newsevents" element={<NewsEvents />} />
         <Route path="/news/:id" element={<NewsDetail />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery/photo" element={<PhotoGallery />} />
-        <Route path="/gallery/video" element={<VideoGallery />} />
+
+        {/* About Us routes */}
+
+        <Route path="/committee" element={<Committee />} />
+        <Route path="/advisory" element={<Advisory />} />
+        <Route path="/ourteam" element={<OurTeam />} />
+
+        {/* Achievements routes */}
+
+        <Route path="/award" element={<Award />} />
+        <Route path="/otherachievement" element={<OtherAchievement />} />
+
+        {/* Programs routes */}
+
+        <Route path="/biodiversityprogram" element={<BiodiversityProgram />} />
+        <Route path="/humanitarianprogram" element={<HumanitarianProgram />} />
         <Route
-          path="/programs/biodiversityprogram"
-          element={<BiodiversityProgram />}
-        />
-        <Route
-          path="/programs/humanitarianprogram"
-          element={<HumanitarianProgram />}
-        />
-        <Route
-          path="/programs/cowsanctuariesinitiative"
+          path="/cowsanctuariesinitiative"
           element={<CowSanctuariesInitiative />}
         />
         <Route
-          path="/programs/cleanergreenernepalmovement"
+          path="/cleanergreenernepalmovement"
           element={<CleanerGreenerNepalMovement />}
         />
         <Route
-          path="/programs/touristroutedevelopment"
+          path="/touristroutedevelopment"
           element={<TouristRouteDevelopment />}
         />
+
+        {/* Gallery routes */}
+
+        <Route path="/gallery/photo" element={<PhotoGallery />} />
+        <Route path="/gallery/video" element={<VideoGallery />} />
       </Route>
     )
   );

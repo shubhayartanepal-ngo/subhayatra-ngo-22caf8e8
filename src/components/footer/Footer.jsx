@@ -98,37 +98,49 @@ const Footer = () => {
                       </li>
                       <li
                         className={
-                          location.pathname === "/about"
+                          location.pathname === "/ourteam"
                             ? "current-menu-item"
                             : ""
                         }
                       >
-                        <Link to="/about">About Us</Link>
+                        <Link to="/ourteam">Our Team</Link>
                       </li>
                       <li
                         className={
-                          location.pathname === "/about"
+                          location.pathname === "/gallery/photo" ||
+                          location.pathname === "/gallery/video"
                             ? "current-menu-item"
                             : ""
                         }
                       >
-                        <Link to="/about">Gallery</Link>
+                        <Link to="/gallery/photo">Gallery</Link>
                       </li>
                       <li
                         className={
-                          location.pathname === "/about"
+                          location.pathname === "/award"
                             ? "current-menu-item"
                             : ""
                         }
                       >
-                        <Link to="/about"> Achievements</Link>
+                        <Link to="/award">Achievements</Link>
                       </li>
                       <li
                         className={
-                          location.pathname === "/#" ? "current-menu-item" : ""
+                          location.pathname.includes("program")
+                            ? "current-menu-item"
+                            : ""
                         }
                       >
-                        <Link to="/about">Programs</Link>
+                        <Link to="/biodiversityprogram">Programs</Link>
+                      </li>
+                      <li
+                        className={
+                          location.pathname === "/newsevents"
+                            ? "current-menu-item"
+                            : ""
+                        }
+                      >
+                        <Link to="/newsevents">News & Events</Link>
                       </li>
                       <li
                         className={
@@ -181,7 +193,7 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <p className="text-center m-0">
-            © <strong>SUBHAYATRA NEPAL</strong> All Rights Reserved By{" "}
+            © <strong>SHUBHAYATRA NEPAL</strong> All Rights Reserved By{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
