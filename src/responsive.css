@@ -428,6 +428,75 @@
   .banner-text-area-3 .default-button {
     margin-top: 0;
   }
+  /*================================================
+  Mobile Text & Typography Refinements
+  =================================================*/
+  /* Justified text creates uneven word-spacing on narrow screens */
+  p {
+    text-align: left;
+  }
+  /* Scale down heading sizes for small screens */
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .section-head h2 {
+    font-size: 22px;
+  }
+  /*================================================
+  Navbar Logo — Mobile Size
+  =================================================*/
+  img#navbar-logo,
+  img.navbar-logo {
+    height: 56px;
+  }
+  /*================================================
+  News Section Header — Stack on Mobile
+  =================================================*/
+  /* Prevent "Latest News" h2 and "View All" link from cramming on one line */
+  .section-head.d-flex.justify-content-between {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px;
+  }
+  /*================================================
+  Contact Page — Iframe Overflow Fix
+  =================================================*/
+  /* The iframe has a hardcoded width="600" attribute; force 100% via CSS */
+  .google-map iframe {
+    width: 100% !important;
+  }
+  /*================================================
+  Programs — Remove Fixed Heights on Full-Width Mobile Cards
+  =================================================*/
+  /* Tailwind min-h-[320px] / max-h-[480px] cause uneven stacking at mobile */
+  .service-box {
+    min-height: auto !important;
+    max-height: none !important;
+  }
+  /*================================================
+  Footer — Mobile Padding & Logo Size
+  =================================================*/
+  .main-footer {
+    padding: 36px 0 28px;
+  }
+  img#footer-logo {
+    height: 80px !important;
+  }
+  .qr-code {
+    width: 90px !important;
+  }
+  /*================================================
+  General Container — Ensure No Horizontal Overflow
+  =================================================*/
+  .container-fluid {
+    max-width: 100%;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /*================================================

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import newsData from "../data/newsData";
+import PhotoGrid from "../components/PhotoGrid/PhotoGrid";
 
 const NewsDetail = () => {
   const { id } = useParams();
@@ -14,11 +15,9 @@ const NewsDetail = () => {
       <h3 className="mb-3">{newsItem.title}</h3>
       <div className="row">
         {newsItem.image ? (
-          newsItem.image.map((img) => (
-            <div className="col col-md-6 col-lg-4" key={img}>
-              <img src={img} alt="" className="img-fluid mb-4" />
-            </div>
-          ))
+          <div className="col-12">
+            <PhotoGrid items={newsItem.image} />
+          </div>
         ) : (
           <div className="text-center">
             <img src="/images/logo.png" alt="" className="mb-4 news-img" />

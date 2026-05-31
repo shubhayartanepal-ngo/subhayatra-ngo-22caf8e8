@@ -1,0 +1,282 @@
+/* Styles for AboutUs component - matches provided mock */
+.aboutus-section {
+  padding: 80px 0;
+  background: #eff0f0;
+}
+.aboutus-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.aboutus-left {
+  flex: 1 1 580px;
+  min-width: 300px;
+  position: relative;
+  min-height: 410px;
+}
+
+.artboard {
+  background: #e6f0e8; /* pale green panel */
+  width: 600px;
+  height: 420px;
+  margin-left: 18px;
+  margin-top: 18px;
+  border-radius: 2px;
+}
+.composition {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 600px;
+  height: 420px;
+}
+.composition__photo {
+  position: absolute;
+  display: block;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.12);
+  border: 4px solid #fff;
+  background: #fff;
+  object-fit: cover;
+}
+.composition__photo--p1 {
+  width: 360px;
+  height: 260px;
+  left: 18px;
+  top: 6px;
+  z-index: 6;
+  transform: rotate(-0.4deg);
+}
+.composition__photo--p2 {
+  width: 150px;
+  height: 150px;
+  left: 380px;
+  top: 220px;
+  z-index: 4;
+  transform: rotate(0deg);
+}
+.composition__photo--p3 {
+  width: 150px;
+  height: 150px;
+  left: 220px;
+  top: 260px;
+  z-index: 3;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.12);
+  transform: rotate(-0.3deg);
+}
+.composition__photo--p4 {
+  width: 140px;
+  height: 140px;
+  left: 440px;
+  top: 34px;
+  z-index: 4;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.12);
+  transform: rotate(0.5deg);
+}
+.aboutus-right {
+  flex: 1 1 480px;
+  min-width: 300px;
+  padding-top: 6px;
+}
+.aboutus-title h2 {
+  font-size: clamp(2.45rem, 3.6vw, 3.25rem);
+  line-height: 1;
+  margin: 0 0 8px 0;
+  letter-spacing: 1.2px;
+  color: #0f2240;
+  font-weight: 800;
+}
+.aboutus-title h6 {
+  margin: 0 0 13px 0;
+  font-size: 2.02rem;
+  font-weight: 400;
+  color: #f03232;
+}
+.aboutus-description p {
+  margin-bottom: 12px;
+  color: #2f2f2f;
+  font-size: 1.45rem;
+  line-height: 1.58;
+}
+.aboutus-intro {
+  border-bottom: 1px solid #d1d5d8;
+  padding-bottom: 12px;
+}
+.mission-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.mission-title h4 {
+  margin: 0;
+  font-size: 3.1rem;
+  color: #111f34;
+  font-weight: 700;
+}
+.mission-copy {
+  font-size: 1.45rem;
+  color: #2f2f2f;
+  line-height: 1.56;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.feature-list {
+  margin-top: 14px;
+}
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #d5d8dc;
+}
+.feature-row:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+.feature-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f03232;
+}
+.aboutus-inline-icon {
+  width: 20px;
+  height: 20px;
+}
+.feature-text {
+  color: #333;
+}
+.feature-text strong {
+  display: block;
+  font-weight: 400;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #2e2f33;
+}
+@media (max-width: 880px) {
+  .aboutus-inner {
+    gap: 28px;
+  }
+  .aboutus-left {
+    min-height: auto;
+  }
+  .artboard,
+  .composition {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    height: auto;
+  }
+  .artboard {
+    display: none;
+  }
+  .aboutus-title h6,
+  .mission-title h4,
+  .feature-text strong {
+    font-size: 1.35rem;
+  }
+  .composition__photo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin-bottom: 14px;
+  }
+}
+
+/* Medium screens: scale composition to prevent overflow */
+@media (max-width: 1200px) and (min-width: 881px) {
+  .aboutus-inner {
+    gap: 40px;
+  }
+  .aboutus-left {
+    flex: 1 1 480px;
+  }
+  .artboard {
+    width: 480px;
+    margin-left: 12px;
+  }
+  .composition {
+    width: 480px;
+    height: 300px;
+    top: 10px;
+    left: 8px;
+  }
+  .composition__photo--p1 {
+    width: 320px;
+    height: 230px;
+    left: 12px;
+    top: 6px;
+  }
+  .composition__photo--p2 {
+    left: 360px;
+    top: 200px;
+  }
+  .composition__photo--p3 {
+    left: 220px;
+    top: 240px;
+  }
+  .composition__photo--p4 {
+    left: 420px;
+    top: 28px;
+  }
+}
+
+@media (max-width: 991px) {
+  .aboutus-section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutus-section {
+    padding: 40px 0;
+  }
+}
+
+/* =================== Very small phones (< 480px) ====================== */
+@media (max-width: 480px) {
+  .aboutus-section {
+    padding: 30px 0;
+  }
+  .aboutus-inner {
+    gap: 18px;
+  }
+  /* Remove min-width so items don't force horizontal scroll */
+  .aboutus-left,
+  .aboutus-right {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .aboutus-title h2 {
+    font-size: clamp(1.7rem, 5.5vw, 2.1rem);
+    letter-spacing: 0.5px;
+  }
+  .aboutus-title h6 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+  .mission-title h4 {
+    font-size: 1.9rem;
+  }
+  .aboutus-description p,
+  .mission-copy {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+  .feature-text strong {
+    font-size: 1.15rem;
+  }
+  .feature-row {
+    gap: 10px;
+    padding: 10px 0;
+  }
+}

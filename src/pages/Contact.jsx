@@ -73,7 +73,7 @@ const Contact = () => {
               <div className="col-lg-4">
                 <div className="google-map pr-20">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56564.58587011266!2d83.41955901233268!3d27.615638520963195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399684fe9847081b%3A0xe468be013b706a29!2sManigram%2C%20Tilottama!5e0!3m2!1sen!2snp!4v1737537203812!5m2!1sen!2snp"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d828.9656364733391!2d83.47395096824819!3d27.630309959518986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399685001f84b05f%3A0x52344bf8fac75f0c!2sShubhayatra%20Nepal!5e0!3m2!1sen!2snp!4v1779099796188!5m2!1sen!2snp"
                     width="600"
                     height="450"
                     allowfullscreen=""

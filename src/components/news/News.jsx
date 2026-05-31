@@ -5,8 +5,8 @@ const News = () => {
   return (
     <section className="wpb_row row-fluid section-padd bg-light">
       <div className="container">
-        <div className="section-head text-center mb-4">
-          <div className="section-head text-center mb-4 d-flex justify-content-around align-items-center">
+        <div className="section-head  mb-4">
+          <div className="section-head text-center mb-4 d-flex justify-content-between align-items-center">
             <h2 className="mb-0 ">Latest News & Updates</h2>
             <span>
               <Link

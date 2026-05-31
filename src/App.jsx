@@ -12,16 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import MainLayout from "./layouts/MainLayout/MainLayout";
-import Dashboard from "./dashboard/Dashboard";
-import DashboardOverview from "./dashboard/DashboardOverview";
-import DashboardUsers from "./dashboard/DashboardUsers";
-import DashboardEvents from "./dashboard/DashboardEvents";
-import DashboardNews from "./dashboard/DashboardNews";
-import DashboardGallery from "./dashboard/DashboardGallery";
-import DashboardPrograms from "./dashboard/DashboardPrograms";
-import DashboardReports from "./dashboard/DashboardReports";
-import DashboardSettings from "./dashboard/DashboardSettings";
-import DashboardProfile from "./dashboard/DashboardProfile";
+
 import {
   HomePage,
   Contact,
@@ -38,7 +29,6 @@ import {
   PhotoGallery,
   VideoGallery,
   NewsDetail,
-  Login,
 } from "./pages";
 import NewsEvents from "./pages/NewsEvents";
 
@@ -47,20 +37,6 @@ function App() {
     createRoutesFromElements(
       <>
         {/* Login route - standalone, no MainLayout */}
-        <Route path="/login" element={<Login />} />
-
-        {/* Dashboard routes - standalone with Dashboard layout */}
-        <Route path="/dashboard" element={<Dashboard />}>
-          <Route index element={<DashboardOverview />} />
-          {/* <Route path="users" element={<DashboardUsers />} /> */}
-          <Route path="events" element={<DashboardEvents />} />
-          <Route path="news" element={<DashboardNews />} />
-          <Route path="gallery" element={<DashboardGallery />} />
-          <Route path="programs" element={<DashboardPrograms />} />
-          <Route path="reports" element={<DashboardReports />} />
-          <Route path="settings" element={<DashboardSettings />} />
-          <Route path="profile" element={<DashboardProfile />} />
-        </Route>
 
         {/* Main routes with MainLayout wrapper */}
         <Route path="/" element={<MainLayout />}>

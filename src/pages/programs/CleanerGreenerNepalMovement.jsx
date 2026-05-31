@@ -6,7 +6,10 @@ const CleanerGreenerNepalMovement = () => {
           {/* Image Section */}
           <div className="col-md-6">
             <div className="image-row">
-              <img src="/images/about/tree.jpg" alt="Cow 1" />
+              <img
+                src="/images/programs/cleaner-greener.jpg"
+                alt="Cleaner Greener Nepal"
+              />
             </div>
           </div>
           {/* Content Section */}

@@ -32,7 +32,7 @@ const Programs = () => {
             <div className="column-inner ">
               <div className="wpb_wrapper ">
                 <div className="section-head ">
-                  <h2>OUR PR0GRAMS</h2>
+                  <h2>OUR PROGRAMS</h2>
                   <h6 className="section-title">
                     Initiatives that drive positive change across Nepal
                   </h6>

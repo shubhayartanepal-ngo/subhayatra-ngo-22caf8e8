@@ -1,62 +1,38 @@
 import React from "react";
+import { Navbar } from "../index";
 import "./Hero.css";
 
 const Hero = () => {
   return (
-    <>
-      {/* <section className="creative-hero--section">
-        <div
-          className="bg bg-image"
-          style={{
-            backgroundImage: "url('/images/banner/banner-2.jpg')",
-          }}
-        ></div>
-        <div className="bg-overlay"></div>
-        <div className="container">
-          <div className="content-box">
-            <span className="hero-subtitle">
-              Where Business Meets Excellence
-            </span>
-            <h1 className="hero-title">
-              Where Tradition Meets Innovation in Pursuit of Excellence.
-            </h1>
-            <p className="hero-desc">
-              Campus on a tour designed for prospective graduate and
-              professional students. You will see how our university looks like,
-              facilities, students, and life in this university. Meet our
-              graduate admissions representative to learn more about our
-              graduate programs and decide what is best for you.
-            </p>
-          </div>
-        </div>
-      </section> */}
-      <section className="home-banner ptb-100">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="banner-text-area">
-                <h1>Empowering Communities Across Nepal</h1>
-                <p>
-                  Promoting cultural heritage and sustainable development across
-                  Nepal
-                </p>
-                <a className="default-button" href="about.html">
-                  Learn More
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="home-banner-area">
-                <img
-                  src="/images/banner/banner-2.jpg"
-                  alt="Modern architecture with glass panels"
-                />
-              </div>
+    <section
+      className="home-banner home-banner--hero ptb-100"
+      style={{
+        backgroundImage:
+          "linear-gradient(to right, rgba(15, 23, 42, 0.95) 30%, rgba(15, 23, 42, 0.4)), url('/images/banner/image.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="home-banner__navbar">
+        <Navbar />
+      </div>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-7">
+            <div className="banner-text-area">
+              <h1>Empowering Communities Across Nepal</h1>
+              <p>
+                Promoting cultural heritage and sustainable development across
+                Nepal
+              </p>
+              <a className="default-button" href="about.html">
+                Learn More
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

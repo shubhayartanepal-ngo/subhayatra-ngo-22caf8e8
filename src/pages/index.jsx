@@ -2,8 +2,6 @@ export { default as HomePage } from "./HomePage";
 
 export { default as Contact } from "./Contact";
 
-export { default as Login } from "./Login";
-
 // About Us pages
 
 export { default as Committee } from "./aboutus/Committee";

@@ -2,8 +2,8 @@ const newsData = [
   {
     id: 1,
     image: [
-      "/images/blog/WhatsApp Image 2025-07-11 at 4.11.33 PM.jpeg",
-      "/images/blog/WhatsApp Image .jpeg",
+      "/images/blog/WhatsAppImage2025-07-11at4.11.33 PM.jpeg",
+      "/images/blog/WhatsAppImage.jpeg",
     ],
     title:
       "शुभयात्रा नेपाल द्वारा आयोजना गरिएको क्यान्सर तथा आँखा स्वास्थ्य शिविरमा बिशेष सहयोग गर्नुहुने मुक्तिनाथ विकास बैंक, गरिमा विकास बैंकलाई बिशेष धन्यवाद ब्यक्त गर्दछौ ।",
@@ -15,6 +15,7 @@ const newsData = [
   {
     id: 2,
     image: [
+      "/images/events/yoga-lab.jpg",
       "/images/blog/news2.jpeg",
       "/images/blog/news1.jpeg",
       "/images/blog/news3.jpeg",

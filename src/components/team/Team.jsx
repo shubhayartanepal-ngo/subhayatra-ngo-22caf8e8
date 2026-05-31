@@ -1,9 +1,100 @@
+import { useEffect, useState } from "react";
 import teamData from "../../data/teamData";
-import { useSlickSlider } from "../../hooks/useSlickSlider";
 import { Link } from "react-router-dom";
+import { getTeam, normalizeApiTeamMember } from "../../apis/team";
+import $ from "jquery";
+import "slick-carousel";
 
-const Team = (member) => {
-  useSlickSlider(".testi-slider");
+const Team = () => {
+  const [members, setMembers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const loadTeam = async () => {
+      const data = await getTeam();
+      if (!mounted) return;
+
+      const mappedApi = data.map(normalizeApiTeamMember);
+      const mergedMembers = [
+        ...mappedApi.map((member) => ({ ...member, source: "api" })),
+        ...teamData.map((member) => ({ ...member, source: "static" })),
+      ];
+
+      setMembers(mergedMembers);
+      setIsLoading(false);
+    };
+
+    loadTeam();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isLoading) return undefined;
+
+    const $slider = $(".testi-slider");
+
+    if (!$slider.length) return undefined;
+
+    if ($slider.hasClass("slick-initialized")) {
+      $slider.slick("unslick");
+    }
+
+    $slider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      adaptiveHeight: true,
+      prevArrow:
+        '<button type="button" class="prev-nav"><i class="fa fa-angle-left"></i></button>',
+      nextArrow:
+        '<button type="button" class="next-nav"><i class="fa fa-angle-right"></i></button>',
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: true,
+            dots: false,
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+          },
+        },
+      ],
+    });
+
+    return () => {
+      if ($slider.hasClass("slick-initialized")) {
+        $slider.slick("unslick");
+      }
+    };
+  }, [isLoading]);
+
+  if (isLoading) return null;
 
   return (
     <>
@@ -25,13 +116,13 @@ const Team = (member) => {
                   </div>
 
                   <div className="testi-slider" data-show="4" data-arrow="true">
-                    {teamData.map((member, index) => (
-                      <div>
+                    {members.map((member, index) => (
+                      <div key={`${member.source}-${member.id || index}`}>
                         <div className="testi-item box-shadow-hover">
                           <div className="member-item radius">
                             <div className="avatar">
                               <img
-                                src={member.img ? member.img : avatar}
+                                src={member.img || "/images/logo.png"}
                                 alt={member.name}
                               />
                               <span className="overlay"></span>
@@ -39,7 +130,7 @@ const Team = (member) => {
                                 {member.socials.map((social, index) => (
                                   <Link
                                     key={index}
-                                    to={social.link}
+                                    to={social.link || "#"}
                                     target="_blank"
                                   >
                                     <i
