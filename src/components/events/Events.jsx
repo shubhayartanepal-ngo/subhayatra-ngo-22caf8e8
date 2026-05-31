@@ -9,14 +9,14 @@ const Events = () => {
       date: "Jun 12, 2026",
       title: "Cultural Heritage Awareness Drive",
       location: "Shivamthan, Arua, Kathmandu",
-      image: "/images/events/1.jpg",
+      image: "/images/events/3.jpg",
     },
     {
       tag: "Environment",
       date: "Jun 28, 2026",
       title: "Bagmati River Clean-up & Waste Management",
       location: "Riverside Corridor, Kathmandu",
-      image: "/images/events/2.jpeg",
+      image: "/images/gallery/g11.jpeg",
     },
     {
       tag: "Conference",

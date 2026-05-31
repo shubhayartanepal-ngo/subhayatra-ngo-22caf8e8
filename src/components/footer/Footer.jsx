@@ -192,14 +192,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="copyright">
-          <p className="text-center m-0" style={{ textAlign: "center" }}>
+          <p className="text-center m-0">
             Copyright © <strong>SHUBHAYATRA NEPAL</strong> All Rights Reserved
             By.&nbsp;
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="www.shubhayatra.ngo"
-            ></a>
           </p>
         </div>
         <Link
@@ -208,8 +203,6 @@ const Footer = () => {
           className="show"
           onClick={scrollToTop}
         ></Link>
-        {/* Mobile-specific inline style to ensure copyright centers on small screens */}
-        <style>{`@media (max-width:480px){ .site-footer .copyright p{ text-align: center !important; margin-left:0 !important; margin-right:0 !important; } }`}</style>
       </div>
     </>
   );

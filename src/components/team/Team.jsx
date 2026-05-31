@@ -57,7 +57,8 @@ const Team = () => {
         '<button type="button" class="next-nav"><i class="fa fa-angle-right"></i></button>',
       responsive: [
         {
-          breakpoint: 991,
+          // < 992px: tablet landscape / small laptop
+          breakpoint: 992,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -67,21 +68,23 @@ const Team = () => {
           },
         },
         {
-          breakpoint: 767,
+          // < 768px: tablet portrait — show 2 cards
+          breakpoint: 768,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
-            arrows: false,
-            dots: true,
+            arrows: true,
+            dots: false,
           },
         },
         {
+          // < 480px: mobile — single card
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
-            dots: true,
+            arrows: true,
+            dots: false,
           },
         },
       ],

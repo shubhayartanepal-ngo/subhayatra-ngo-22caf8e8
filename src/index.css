@@ -2036,11 +2036,37 @@ Default Section Title Area CSS
   color: var(--whiteColor);
 }
 .newsletter-form .news-btn {
-  width: 100%;
-  padding: 10px 15px;
+  width: auto; /* intrinsic size on larger viewports */
+  min-width: 140px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* prevent label wrap */
+  border-radius: 8px;
+  height: 40px;
+  line-height: 1;
 }
 .newsletter-form .news-btn:hover {
   background-color: var(--blackColor);
+}
+
+/* Footer: place subscribe button directly below the input (stacked) */
+.site-footer .widget_mc4wp_form_widget .row.al-content-center {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 10px;
+}
+.site-footer .widget_mc4wp_form_widget .col-7,
+.site-footer .widget_mc4wp_form_widget .col-5 {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+.site-footer .widget_mc4wp_form_widget .news-btn {
+  width: 100% !important;
+  min-width: 0 !important;
 }
 /*--------------------------------------------------------------
 ## Header Mobile
@@ -3675,7 +3701,7 @@ object {
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
   overflow: hidden;
-  height: 35rem;
+  min-height: 35rem; /* use min-height so content can expand/contract on small screens */
 }
 .service-box-padd {
   padding: 35px !important;
@@ -4462,7 +4488,9 @@ a .service-box {
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  top: -105px;
+  /* vertically center arrows relative to the slider */
+  top: 50%;
+  transform: translateY(-50%);
   right: 15px;
 }
 .testi-slider .slick-arrow i {
@@ -4470,12 +4498,128 @@ a .service-box {
   display: block;
 }
 .testi-slider .slick-arrow.prev-nav {
-  right: 70px;
+  left: 15px;
+  right: auto;
 }
 .testi-slider .slick-arrow:hover {
   border-color: var(--mainColor);
   background: var(--mainColor);
   color: #fff;
+}
+
+/* Mobile: center slick dots for testimonial/team sliders */
+@media (max-width: 767px) {
+  .testi-slider {
+    margin: 0; /* avoid negative gutters on small screens */
+  }
+  .testi-slider .slick-dots {
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 12px 0 0 !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+  .testi-slider .slick-dots li {
+    margin: 0 6px !important;
+  }
+  /* Make slick arrows visible and positioned for mobile */
+  .testi-slider .slick-arrow {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 34px !important;
+    font-size: 20px !important;
+    right: 8px !important;
+    border-radius: 4px !important;
+    opacity: 0.95;
+  }
+  .testi-slider .slick-arrow.prev-nav {
+    left: 8px !important;
+    right: auto !important;
+  }
+  .testi-slider .slick-arrow.next-nav {
+    right: 8px !important;
+    left: auto !important;
+  }
+  /* Center text inside testimonial/team cards on small screens */
+  .testi-item .testi-head,
+  .testi-item .testi-content,
+  .member-item .mem-info {
+    text-align: center !important;
+  }
+  .testi-item .testi-head img {
+    float: none !important;
+    display: block !important;
+    margin: 0 auto 12px !important;
+    max-width: 80px !important;
+    height: auto !important;
+  }
+  .testi-item .testi-content p {
+    margin-top: 12px !important;
+  }
+}
+
+/* Tablet adjustments: keep arrows visible and centered for widths under 992px */
+@media (max-width: 991px) {
+  .testi-slider {
+    margin: 0; /* remove negative gutters */
+  }
+  .testi-slider .slick-arrow {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 38px !important;
+    height: 38px !important;
+    line-height: 36px !important;
+    font-size: 18px !important;
+    right: 12px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+  }
+  .testi-slider .slick-arrow.prev-nav {
+    left: 12px !important;
+    right: auto !important;
+  }
+  .testi-slider .slick-arrow.next-nav {
+    right: 12px !important;
+    left: auto !important;
+  }
+}
+
+/* Strong overrides to ensure arrows are visible and card text centers */
+.member-item .mem-info,
+.member-item .mem-info h5,
+.member-item .mem-info h5 span {
+  text-align: center !important;
+}
+.testi-slider {
+  overflow: visible !important;
+}
+.testi-slider .slick-arrow {
+  z-index: 9999 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  color: var(--mainColor) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+}
+.testi-slider .slick-arrow.prev-nav {
+  left: 12px !important;
+  right: auto !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Force h5 to center its inline and block children reliably (names + role spans) */
+.member-item .mem-info h5 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .testi-item-2 {
@@ -4682,7 +4826,7 @@ a .service-box {
 .member-item .mem-info {
   padding: 28px 30px 8px;
   background: #fff;
-  text-align: center;
+  text-align: center !important;
 }
 .member-item .mem-info h5 span {
   display: block;
@@ -5219,79 +5363,82 @@ div.line-chart .chart-legend li {
 }
 @media (max-width: 600px) {
   .team-slider .member-item img {
-    width: 100%;
-  }
-}
-
-/*Equal height*/
-@media only screen and (min-width: 768px) {
-  .wpb_row.row-o-equal-height .column_container {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
+    width: 100% !important;
+    display: block !important;
+    min-width: 0 !important;
+    height: auto !important;
   }
 
-  .wpb_row.row-o-equal-height > .row {
-    width: 100%;
-    margin: 0;
-  }
+  /*Equal height*/
+  @media only screen and (min-width: 768px) {
+    .wpb_row.row-o-equal-height .column_container {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;
+    }
 
-  .wpb_row.row-o-equal-height .row,
-  .wpb_row.row-flex {
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-  }
+    .wpb_row.row-o-equal-height > .row {
+      width: 100%;
+      margin: 0;
+    }
 
-  _::-webkit-full-page-media,
-  _:future,
-  :root .wpb_row.row-o-equal-height .row {
-    display: -webkit-box;
-    display: -webkit-flex;
-  }
+    .wpb_row.row-o-equal-height .row,
+    .wpb_row.row-flex {
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;
+    }
 
-  .wpb_row.row-o-equal-height .column_container {
-    -moz-box-align: stretch;
-    align-items: stretch;
-  }
+    _::-webkit-full-page-media,
+    _:future,
+    :root .wpb_row.row-o-equal-height .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+    }
 
-  .wpb_row.row-o-content-middle .column_container .column-inner {
-    -moz-box-pack: center;
-    justify-content: center;
-  }
+    .wpb_row.row-o-equal-height .column_container {
+      -moz-box-align: stretch;
+      align-items: stretch;
+    }
 
-  .wpb_row.row-flex .column_container:not(.bg-center) .column-inner {
-    -moz-box-flex: 1;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-position: top !important;
-  }
+    .wpb_row.row-o-content-middle .column_container .column-inner {
+      -moz-box-pack: center;
+      justify-content: center;
+    }
 
-  .wpb_row.row-o-content-bottom .column_container .column-inner {
-    -moz-box-pack: end;
-    justify-content: flex-end;
-  }
+    .wpb_row.row-flex .column_container:not(.bg-center) .column-inner {
+      -moz-box-flex: 1;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      background-position: top !important;
+    }
 
-  .wpb_row.row-o-content-top .column_container .column-inner {
-    -moz-box-pack: start;
-    justify-content: flex-start;
+    .wpb_row.row-o-content-bottom .column_container .column-inner {
+      -moz-box-pack: end;
+      justify-content: flex-end;
+    }
+
+    .wpb_row.row-o-content-top .column_container .column-inner {
+      -moz-box-pack: start;
+      justify-content: flex-start;
+    }
   }
 }
 /*--------------------------------------------------------------

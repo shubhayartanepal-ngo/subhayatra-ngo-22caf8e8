@@ -82,3 +82,12 @@ p {
     word-break: break-word;
   }
 }
+
+/* Ensure site-footer copyright is centered on small viewports (redundant-safe rule) */
+@media (max-width: 480px) {
+  .site-footer .copyright p {
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
