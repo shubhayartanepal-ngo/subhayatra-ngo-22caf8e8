@@ -78,7 +78,9 @@ const Navbar = () => {
                             </li>
                           </ul>
                         </li>
-
+                        <li className="menu-item">
+                          <NavLink to="/newsevents">News & Events</NavLink>
+                        </li>
                         <li className="menu-item menu-item-has-children">
                           <NavLink to="/">Programs</NavLink>
                           <ul className="sub-menu">
@@ -320,6 +322,11 @@ const Navbar = () => {
                 </ul>
               </li>
 
+              <li className="menu-item">
+                <NavLink to="/newsevents" onClick={() => setIsActive(false)}>
+                  News & Events
+                </NavLink>
+              </li>
               <li className="menu-item">
                 <NavLink to="/contact" onClick={() => setIsActive(false)}>
                   Contact

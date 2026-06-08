@@ -14,7 +14,12 @@ const getImageSize = (src) =>
   });
 
 // items: array of strings (src) or objects { src, id, alt }
-const PhotoGrid = ({ items = null, fetchFromApi = false, apiFilter = {} }) => {
+const PhotoGrid = ({
+  items = null,
+  fetchFromApi = false,
+  apiFilter = {},
+  targetRowHeight = 200,
+}) => {
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
   const mediaType = apiFilter.mediaType || "";
@@ -78,7 +83,7 @@ const PhotoGrid = ({ items = null, fetchFromApi = false, apiFilter = {} }) => {
     <PhotoAlbum
       layout="masonry"
       photos={photos}
-      targetRowHeight={200}
+      targetRowHeight={targetRowHeight}
       renderPhoto={({ photo, imageProps, wrapperStyle, wrapperProps }) => (
         <div style={wrapperStyle} {...wrapperProps}>
           <a href={photo.src} data-lightbox="gallery" data-title={photo.alt}>

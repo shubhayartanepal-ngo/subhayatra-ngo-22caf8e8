@@ -25,9 +25,6 @@ const Hero = () => {
                 Promoting cultural heritage and sustainable development across
                 Nepal
               </p>
-              <a className="default-button" href="about.html">
-                Learn More
-              </a>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ const NewsEvents = () => {
                       newsItem.image ? newsItem.image[0] : "/images/logo.png"
                     }
                     alt={newsItem.title}
-                    className="w-100 h-auto object-cover"
+                    className="w-100 h-100 object-fit-cover"
                   />
                 </div>
                 <div className="blog-card-text-area p-3">
