@@ -1,20 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import clgLogo from "/images/logo.png";
 import "./Footer.css";
 import { Link, useLocation } from "react-router-dom";
+import { getContactInfo } from "../../apis/contact";
+
 const Footer = () => {
   const location = useLocation();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const collegeInfo = {
+  const [collegeInfo, setCollegeInfo] = useState({
     address: "Manigram,Tilottama-15,Rupandehi,Nepal",
     phoneNumber: "+977- 9856077385",
     email: "shubhayatran@gmail.com",
     facebookLink: "",
     instagramLink: "",
-  };
+  });
+
+  useEffect(() => {
+    getContactInfo().then((info) => {
+      if (info) {
+        setCollegeInfo((prev) => ({
+          ...prev,
+          address: info.location || prev.address,
+          phoneNumber: info.phoneNumber || prev.phoneNumber,
+          email: info.email || prev.email,
+        }));
+      }
+    });
+  }, []);
   return (
     <>
       <div id="site-footer" className="site-footer bg-second">
@@ -34,7 +49,7 @@ const Footer = () => {
                   <div className="textwidget custom-html-widget">
                     <p>
                       <i className="fa fa-map-marker"></i>
-                      <span> Manigram,Tilottama-15,Rupandehi,Nepal</span>
+                      <span> {collegeInfo.address}</span>
                     </p>
                     <p>
                       <i className="fa fa-envelope"></i>
@@ -42,7 +57,7 @@ const Footer = () => {
                         <Link
                           id="email-link"
                           className="text-light"
-                          to="mailto:skycollegehelpdesk@gmail.com"
+                          to={`mailto:${collegeInfo.email}`}
                           target="_blank"
                         >
                           {" "}
@@ -193,12 +208,8 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <p className="text-center m-0">
-            © <strong>SHUBHAYATRA NEPAL</strong> All Rights Reserved By{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="www.shubhayatra.ngo"
-            ></a>
+            Copyright © <strong>SHUBHAYATRA NEPAL</strong> All Rights Reserved
+            By.&nbsp;
           </p>
         </div>
         <Link

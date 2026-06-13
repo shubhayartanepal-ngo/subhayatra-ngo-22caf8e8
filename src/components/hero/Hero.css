@@ -5,6 +5,97 @@
   display: flex;
 }
 
+.home-banner--hero {
+  position: relative;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+}
+
+.home-banner__navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+.home-banner__navbar .main-header {
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-banner__navbar .main-header-top {
+  background: transparent;
+}
+
+.home-banner__navbar .main-navigation > ul > li > a,
+.home-banner__navbar .main-navigation ul > li > a {
+  color: #ffffff;
+}
+
+.home-banner__navbar .main-navigation ul ul {
+  background-color: rgba(8, 20, 38, 0.96);
+}
+
+.home-banner__navbar .main-navigation ul ul a {
+  color: #ffffff;
+}
+
+.home-banner__navbar .header_mobile .mlogo_wrapper {
+  background: transparent;
+}
+
+.home-banner__navbar .header_mobile .mobile_nav {
+  background-color: rgba(8, 20, 38, 0.96);
+}
+
+.home-banner__navbar .header_mobile .mobile_nav .mobile_mainmenu li a,
+.home-banner__navbar .dropdown-toggle {
+  color: #ffffff;
+}
+
+.home-banner__navbar #mmenu_toggle button,
+.home-banner__navbar #mmenu_toggle button:before,
+.home-banner__navbar #mmenu_toggle button:after {
+  background: var(--mainColor);
+}
+
+.home-banner__navbar #mmenu_toggle.active button {
+  background: none;
+}
+
+.home-banner--hero .home-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 20, 38, 0.82) 0%,
+    rgba(8, 20, 38, 0.45) 55%,
+    rgba(8, 20, 38, 0.2) 100%
+  );
+  z-index: 0;
+}
+
+.home-banner--hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.home-banner--hero .banner-text-area h1,
+.home-banner--hero .banner-text-area p {
+  color: #fff;
+}
+
+.home-banner--hero .banner-text-area {
+  max-width: 620px;
+}
+
 .creative-hero--section .bg {
   position: absolute;
   left: 0;
@@ -218,6 +309,46 @@
 }
 /* =================== RESPONSIVE IPAD  ============================= */
 @media (max-width: 991px) {
+  .home-banner--hero {
+    min-height: 620px;
+    padding: 120px 0 90px;
+  }
+
+  .home-banner__navbar .main-header-top {
+    padding-top: 10px;
+  }
+
+  .home-banner__navbar .header_mobile .mlogo_wrapper {
+    padding: 12px 16px;
+  }
+
+  .home-banner__navbar .header_mobile .mobile_nav .mobile_mainmenu .sub-menu {
+    background-color: rgba(8, 20, 38, 0.98);
+  }
+
+  .home-banner__navbar
+    .header_mobile
+    .mobile_nav
+    .mobile_mainmenu
+    .sub-menu
+    li {
+    border-top-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .home-banner__navbar .header_mobile .mobile_nav .mobile_mainmenu .sub-menu a {
+    color: #ffffff !important;
+    background-color: transparent;
+  }
+
+  .home-banner__navbar
+    .header_mobile
+    .mobile_nav
+    .mobile_mainmenu
+    .sub-menu
+    a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
   .creative-hero--section {
     height: auto;
     min-height: 500px;
@@ -232,6 +363,51 @@
 }
 /* =================== RESPONSIVE IPHONE  ============================= */
 @media (max-width: 575px) {
+  .home-banner--hero {
+    min-height: 520px;
+    padding: 100px 0 50px;
+    align-items: center;
+    background-position: center center;
+  }
+
+  .home-banner__navbar .main-navigation > ul > li > a,
+  .home-banner__navbar .main-navigation ul > li > a {
+    padding: 20px 12px;
+  }
+
+  .home-banner--hero .banner-text-area {
+    max-width: 100%;
+    margin-top: 16px;
+    padding: 18px 16px 20px;
+
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .home-banner--hero .banner-text-area h1 {
+    max-width: 11ch;
+    margin-bottom: 10px;
+    font-size: 31px;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+
+  .home-banner--hero .banner-text-area p {
+    max-width: 100%;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  .home-banner--hero .banner-text-area .default-button {
+    width: 100%;
+    max-width: 180px;
+    padding: 11px 16px !important;
+    font-size: 12px !important;
+    text-align: center;
+  }
+
   .creative-hero--section .content-box .hero-title {
     font-size: 44px;
   }
@@ -242,5 +418,34 @@
     height: auto; /* Adjust height for very small screens */
     min-height: 300px;
     padding: 80px 0; /* Further reduce padding */
+  }
+}
+
+@media (max-width: 375px) {
+  .home-banner--hero {
+    min-height: 490px;
+    padding: 96px 0 40px;
+    align-items: center;
+  }
+
+  .home-banner--hero .banner-text-area {
+    margin-top: 12px;
+    padding: 16px 14px 18px;
+    border-radius: 18px;
+  }
+
+  .home-banner--hero .banner-text-area h1 {
+    max-width: 10.5ch;
+    font-size: 28px;
+  }
+
+  .home-banner--hero .banner-text-area p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .home-banner--hero .banner-text-area .default-button {
+    max-width: 170px;
+    padding: 10px 14px !important;
   }
 }

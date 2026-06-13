@@ -1,181 +1,234 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Events.css";
+import {
+  getEvents,
+  normalizeApiEventItem,
+  formatEventDate,
+} from "../../apis/events";
 
 const Events = () => {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getEvents()
+      .then((raw) => setEvents(raw.map(normalizeApiEventItem)))
+      .catch(() => setEvents([]))
+      .finally(() => setLoading(false));
+  }, []);
+
+  const metrics = [
+    { value: "+100", label: "Volunteers", icon: "people" },
+    { value: "200K", label: "Impact Footprint", icon: "drop" },
+    { value: "400+", label: "Community Actions", icon: "group" },
+    { value: "1000+", label: "Successful Programs", icon: "award" },
+  ];
+
   return (
     <>
-      <section className="wpb_row row-fluid section-padd bg-light">
+      <section className="events-modern-section section-padd">
         <div className="container">
-          <div className="row ">
-            <div className="wpb_column column_container col-sm-12 col-md-12 ">
-              <div className="column-inner ">
-                <div className="wpb_wrapper ">
-                  <div className="section-head ">
-                    <h2>Upcoming City Events</h2>
-                    <h6 className="section-title">
-                      Lorem ipsum dolor sit amet
-                    </h6>
-                  </div>
-                  <div className="empty_space_30 md-hidden sm-hidden">
-                    <span className="empty_space_inner"></span>
-                  </div>
-                </div>
-              </div>
+          <div className="events-modern-wrap">
+            <div className="events-modern-head section-head">
+              <h2>UPCOMING CITY EVENTS</h2>
+              <h6 className="section-title">JOIN US ON THE GROUND</h6>
             </div>
-            <div className="wpb_column column_container col-sm-12 col-md-12 text-center">
-              <div className="column-inner ">
-                <div className="wpb_wrapper ">
-                  <div className="section-content">
-                    <div className="row justify-content-center">
-                      <div className="wpb_column column_container col-sm-6 col-md-4">
-                        <div className="events-card ">
-                          <img src="images/events/e1.jpg" alt="event" />
-                          <div className="events-card-text text-left">
-                            <ul>
-                              <li>Conference</li>
-                              <li>April 11, 2024</li>
-                            </ul>
-                            <h4>
-                              <a href="event-details.html">
-                                Annual Conference 2024
-                              </a>
-                            </h4>
-                            <p>
-                              <i className="fas fa-map-marker-alt"></i>{" "}
-                              <a href="https://goo.gl/maps/QTg39qSWoB5fdndT7">
-                                <span>
-                                  City Center, Manigram, Tilottama-15,
-                                  Rupandehi, Nepal
-                                </span>
-                              </a>
-                            </p>
-                            <a
-                              className="read-more-btn"
-                              href="event-details.html"
-                            >
-                              Read More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="wpb_column column_container col-sm-6 col-md-4">
-                        <div className="events-card">
-                          <img src="images/events/e2.jpg" alt="event2" />
-                          <div className="events-card-text">
-                            <ul>
-                              <li>Conference</li>
-                              <li>Apr 13, 2024</li>
-                            </ul>
-                            <h4>
-                              <a href="event-details.html">
-                                Negotiation In Government
-                              </a>
-                            </h4>
-                            <p>
-                              <i className="fas fa-map-marker-alt"></i>{" "}
-                              <a href="https://goo.gl/maps/QTg39qSWoB5fdndT7">
-                                City Center, Manigram, Tilottama-15, Rupandehi,
-                                Nepal
-                              </a>
-                            </p>
-                            <a
-                              className="read-more-btn"
-                              href="event-details.html"
-                            >
-                              Read More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="wpb_column column_container col-sm-6 col-md-4">
-                        <div className="events-card">
-                          <img src="images/events/e3.jpg" alt="event3" />
-                          <div className="events-card-text">
-                            <ul>
-                              <li>Conference</li>
-                              <li>Apr 14, 2024</li>
-                            </ul>
-                            <h4>
-                              <a href="event-details.html">
-                                Annual Health Conference
-                              </a>
-                            </h4>
-                            <p>
-                              <i className="fas fa-map-marker-alt"></i>{" "}
-                              <a href="https://goo.gl/maps/QTg39qSWoB5fdndT7">
-                                City Center, Manigram, Tilottama-15, Rupandehi,
-                                Nepal
-                              </a>
-                            </p>
-                            <a
-                              className="read-more-btn"
-                              href="event-details.html"
-                            >
-                              Read More
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <section className="fun-facts pt-70 pb-100">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-3 col-md-6 col-sm-6 col-6">
-                <div className="fun-facts-card fun-facts-card-2">
-                  <i className="flaticon-smart-city"></i>
-                  <h2>
-                    <span className="odometer" data-count="46712">
-                      +100
-                    </span>
-                  </h2>
-                  <p>People In The City</p>
+            <div className="events-modern-grid">
+              {loading ? (
+                [1, 2, 3].map((n) => (
+                  <article
+                    className="events-modern-card events-skeleton-card"
+                    key={n}
+                  >
+                    <div className="events-skeleton-image" />
+                    <div className="events-modern-body">
+                      <div className="events-modern-meta">
+                        <span className="events-skeleton-tag" />
+                        <span className="events-skeleton-date" />
+                      </div>
+                      <div className="events-skeleton-title" />
+                      <div className="events-skeleton-location" />
+                    </div>
+                  </article>
+                ))
+              ) : events.length === 0 ? (
+                <p className="events-empty-state">
+                  No upcoming events at the moment. Check back soon!
+                </p>
+              ) : (
+                events.map((item) => (
+                  <article className="events-modern-card" key={item.id}>
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="events-modern-image"
+                    />
+                    <div className="events-modern-body">
+                      <div className="events-modern-meta">
+                        <span className="events-modern-tag">Event</span>
+                        <span className="events-modern-date">
+                          {formatEventDate(item.date)}
+                        </span>
+                      </div>
+                      <h4>{item.title}</h4>
+                      <p className="events-modern-location">{item.location}</p>
+                      <Link to="/newsevents" className="events-modern-link">
+                        Read More
+                      </Link>
+                    </div>
+                  </article>
+                ))
+              )}
+            </div>
+            <div className="events-metrics-grid">
+              {metrics.map((metric) => (
+                <div className="events-metric-card" key={metric.label}>
+                  <div className="events-metric-icon" aria-hidden="true">
+                    {metric.icon === "people" && (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="8" cy="9" r="2.5" />
+                        <circle cx="15.5" cy="9" r="2.5" />
+                        <path d="M3.8 17c.7-2.2 2.4-3.6 4.2-3.6S11.5 14.8 12.2 17" />
+                        <path d="M11.3 17c.6-2.2 2.3-3.6 4.1-3.6s3.5 1.4 4.2 3.6" />
+                      </svg>
+                    )}
+                    {metric.icon === "drop" && (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M12 3c-2.8 3.6-5.2 6.5-5.2 9.2A5.2 5.2 0 0 0 12 17.4a5.2 5.2 0 0 0 5.2-5.2C17.2 9.5 14.8 6.6 12 3z" />
+                      </svg>
+                    )}
+                    {metric.icon === "group" && (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="6.8" cy="8.3" r="2" />
+                        <circle cx="12" cy="7.3" r="2.3" />
+                        <circle cx="17.2" cy="8.3" r="2" />
+                        <path d="M3.5 16.8c.5-1.9 1.8-3 3.3-3" />
+                        <path d="M8.2 17.5c.8-2.4 2.1-3.7 3.8-3.7s3 1.3 3.8 3.7" />
+                        <path d="M17.2 13.8c1.5 0 2.8 1.1 3.3 3" />
+                      </svg>
+                    )}
+                    {metric.icon === "award" && (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="12" cy="8.5" r="3.2" />
+                        <path d="M8.7 12.3 7 20l5-2.2L17 20l-1.7-7.7" />
+                      </svg>
+                    )}
+                  </div>
+                  <div className="events-metric-copy">
+                    <h3>{metric.value}</h3>
+                    <p>{metric.label}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-6">
-                <div className="fun-facts-card fun-facts-card-2">
-                  <i className="flaticon-location-1"></i>
-                  <h2>
-                    <span className="odometer" data-count="22">
-                      200
-                    </span>
-                    <span className="sign-icon">K</span>
-                  </h2>
-                  <p>Square Of City</p>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-6">
-                <div className="fun-facts-card fun-facts-card-2">
-                  <i className="flaticon-park-1"></i>
-                  <h2>
-                    <span className="odometer" data-count="300">
-                      400
-                    </span>
-                    <span className="sign-icon">+</span>
-                  </h2>
-                  <p>Year Of Foundation</p>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-6">
-                <div className="fun-facts-card last-card fun-facts-card-2">
-                  <i className="flaticon-award"></i>
-                  <h2>
-                    <span className="odometer" data-count="1000">
-                      1000
-                    </span>
-                    <span className="sign-icon">+</span>
-                  </h2>
-                  <p>Successful Programs</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </section>
+          {/* <div className="events-modern-wrap metrics-wrap">
+            <div className="events-modern-head section-head metrics-head">
+              <h2>IMPACT METRICS</h2>
+              <h6 className="section-title">MAKING A MEASURABLE DIFFERENCE</h6>
+            </div>
+
+            <div className="events-metrics-grid">
+              {metrics.map((metric) => (
+                <div className="events-metric-card" key={metric.label}>
+                  <div className="events-metric-icon" aria-hidden="true">
+                    {metric.icon === "people" && (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="8" cy="9" r="2.5" />
+                        <circle cx="15.5" cy="9" r="2.5" />
+                        <path d="M3.8 17c.7-2.2 2.4-3.6 4.2-3.6S11.5 14.8 12.2 17" />
+                        <path d="M11.3 17c.6-2.2 2.3-3.6 4.1-3.6s3.5 1.4 4.2 3.6" />
+                      </svg>
+                    )}
+                    {metric.icon === "drop" && (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M12 3c-2.8 3.6-5.2 6.5-5.2 9.2A5.2 5.2 0 0 0 12 17.4a5.2 5.2 0 0 0 5.2-5.2C17.2 9.5 14.8 6.6 12 3z" />
+                      </svg>
+                    )}
+                    {metric.icon === "group" && (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="6.8" cy="8.3" r="2" />
+                        <circle cx="12" cy="7.3" r="2.3" />
+                        <circle cx="17.2" cy="8.3" r="2" />
+                        <path d="M3.5 16.8c.5-1.9 1.8-3 3.3-3" />
+                        <path d="M8.2 17.5c.8-2.4 2.1-3.7 3.8-3.7s3 1.3 3.8 3.7" />
+                        <path d="M17.2 13.8c1.5 0 2.8 1.1 3.3 3" />
+                      </svg>
+                    )}
+                    {metric.icon === "award" && (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="12" cy="8.5" r="3.2" />
+                        <path d="M8.7 12.3 7 20l5-2.2L17 20l-1.7-7.7" />
+                      </svg>
+                    )}
+                  </div>
+                  <div className="events-metric-copy">
+                    <h3>{metric.value}</h3>
+                    <p>{metric.label}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div> */}
+        </div>
       </section>
     </>
   );

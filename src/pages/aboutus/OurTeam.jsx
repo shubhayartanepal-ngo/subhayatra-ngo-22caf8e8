@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import teamData from "../../data/teamData";
 import { Link } from "react-router-dom";
+import { getTeam, normalizeApiTeamMember } from "../../apis/team";
 
 const OurTeam = () => {
+  const [apiTeam, setApiTeam] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const loadTeam = async () => {
+      const data = await getTeam();
+      if (!mounted) return;
+      setApiTeam(data.map(normalizeApiTeamMember));
+    };
+
+    loadTeam();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const members = [
+    ...apiTeam.map((member) => ({ ...member, source: "api" })),
+    ...teamData.map((member) => ({ ...member, source: "static" })),
+  ];
+
   return (
     <section className="wpb_row row-fluid section-padd bg-light">
       <div className="container">
@@ -14,8 +38,11 @@ const OurTeam = () => {
         </div>
 
         <div className="row">
-          {teamData.map((member) => (
-            <div key={member.id} className="col-md-6 col-lg-4 mb-4">
+          {members.map((member, index) => (
+            <div
+              key={`${member.source}-${member.id || index}`}
+              className="col-md-6 col-lg-4 mb-4"
+            >
               {/* <div className="team-card text-center p-4 border rounded shadow-sm bg-white h-100">
                 <div className="member-image mb-3">
                   <img 
@@ -41,13 +68,17 @@ const OurTeam = () => {
                   <div className="member-item radius">
                     <div className="avatar">
                       <img
-                        src={member.img ? member.img : avatar}
+                        src={member.img || "/images/logo.png"}
                         alt={member.name}
                       />
                       <span className="overlay"></span>
                       <div className="social-mem">
                         {member.socials.map((social, index) => (
-                          <Link key={index} to={social.link} target="_blank">
+                          <Link
+                            key={index}
+                            to={social.link || "#"}
+                            target="_blank"
+                          >
                             <i className={`fa fa-${social.platform}`}></i>
                           </Link>
                         ))}

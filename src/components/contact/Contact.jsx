@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getContactInfo } from "../../apis/contact";
 
 const contact = () => {
-  const collegeInfo = {
+  const [collegeInfo, setCollegeInfo] = useState({
     address: "Manigram, Tilottama-05",
     phoneNumber: "071-590150",
     email: "skycollegehelpdesk@gmail.com",
     facebookLink: "https://facebook.com/skycollege2024",
     instagramLink: "https://instagram.com/skyinternationalcollege",
-  };
+  });
+
+  useEffect(() => {
+    getContactInfo().then((info) => {
+      if (info) {
+        setCollegeInfo((prev) => ({
+          ...prev,
+          address: info.location || prev.address,
+          phoneNumber: info.phoneNumber || prev.phoneNumber,
+          email: info.email || prev.email,
+        }));
+      }
+    });
+  }, []);
   return (
     <>
       <section id="text-1" className="widget widget_text bg-second text-light">
@@ -24,7 +38,7 @@ const contact = () => {
             </li>
             <li>
               <span className="normal">Mail:</span>{" "}
-              <Link to={collegeInfo.email}>{collegeInfo.email}</Link>
+              <a href={`mailto:${collegeInfo.email}`}>{collegeInfo.email}</a>
             </li>
           </ul>
           <div className="gaps style-parent"></div>

@@ -1,6 +1,26 @@
 import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { getContactInfo } from "../apis/contact";
 
 const Contact = () => {
+  const [contactInfo, setContactInfo] = useState({
+    location: "walling - 8 syangja/Tilottama- 5 Manigram",
+    email: "shubhayatran@gmail.com",
+    phoneNumber: "+977- 9856077385",
+  });
+
+  useEffect(() => {
+    getContactInfo().then((info) => {
+      if (info) {
+        setContactInfo({
+          location:
+            info.location || "walling - 8 syangja/Tilottama- 5 Manigram",
+          email: info.email || "shubhayatran@gmail.com",
+          phoneNumber: info.phoneNumber || "+977- 9856077385",
+        });
+      }
+    });
+  }, []);
   return (
     <div>
       <section className="uni-banner">
@@ -30,7 +50,7 @@ const Contact = () => {
                     href="https://goo.gl/maps/zZEtThmwqkPz2GTE7"
                     target="_blank"
                   >
-                    walling - 8 syangja/Tilottama- 5 Manigram
+                    {contactInfo.location}
                   </a>
                 </p>
               </div>
@@ -40,13 +60,8 @@ const Contact = () => {
                 <i className="fas fa-envelope"></i>
                 <h5>Our Email</h5>
                 <p>
-                  <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#c5ada0a9a9aa85a8a0a1bfaaeba6aaa8">
-                    <span
-                      className="__cf_email__"
-                      data-cfemail="afc7cac3c3c0efc2cacbd5c081ccc0c2"
-                    >
-                      shubhayatran@gmail.com
-                    </span>
+                  <a href={`mailto:${contactInfo.email}`}>
+                    {contactInfo.email}
                   </a>
                 </p>
               </div>
@@ -56,7 +71,10 @@ const Contact = () => {
                 <i className="fas fa-phone-alt"></i>
                 <h5>PHONE NUMBER</h5>
                 <p>
-                  <a href="tel:+44587154756"> +977- 9856077385</a>
+                  <a href={`tel:${contactInfo.phoneNumber}`}>
+                    {" "}
+                    {contactInfo.phoneNumber}
+                  </a>
                 </p>
               </div>
             </div>
@@ -73,7 +91,7 @@ const Contact = () => {
               <div className="col-lg-4">
                 <div className="google-map pr-20">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56564.58587011266!2d83.41955901233268!3d27.615638520963195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399684fe9847081b%3A0xe468be013b706a29!2sManigram%2C%20Tilottama!5e0!3m2!1sen!2snp!4v1737537203812!5m2!1sen!2snp"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d828.9656364733391!2d83.47395096824819!3d27.630309959518986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399685001f84b05f%3A0x52344bf8fac75f0c!2sShubhayatra%20Nepal!5e0!3m2!1sen!2snp!4v1779099796188!5m2!1sen!2snp"
                     width="600"
                     height="450"
                     allowfullscreen=""

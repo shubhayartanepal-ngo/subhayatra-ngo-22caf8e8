@@ -6,6 +6,7 @@ img#navbar-logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 img.navbar-logo {
@@ -73,4 +74,24 @@ img.navbar-logo {
   background-color: #e9ecef;
   color: #007bff;
   padding-left: 30px;
+}
+
+/* =================== Responsive Logo Sizes ========================= */
+/* Tablet: navbar is still the desktop bar, just tighter */
+@media (max-width: 991px) {
+  img#navbar-logo,
+  img.navbar-logo {
+    height: 64px;
+  }
+}
+/* Mobile phones: header_mobile takes over, keep logo compact */
+@media (max-width: 575px) {
+  img#navbar-logo,
+  img.navbar-logo {
+    height: 52px;
+  }
+  /* Tighten mobile logo wrapper padding on very small screens */
+  .header_mobile .mlogo_wrapper {
+    padding: 14px 14px;
+  }
 }

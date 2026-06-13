@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import MainLayout from "./layouts/MainLayout/MainLayout";
+
 import {
   HomePage,
   Contact,
@@ -34,46 +35,57 @@ import NewsEvents from "./pages/NewsEvents";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<MainLayout />}>
-        {/* Define your routes here */}
-        <Route index element={<HomePage />} />
-        <Route path="/newsevents" element={<NewsEvents />} />
-        <Route path="/news/:id" element={<NewsDetail />} />
-        <Route path="/contact" element={<Contact />} />
+      <>
+        {/* Login route - standalone, no MainLayout */}
 
-        {/* About Us routes */}
+        {/* Main routes with MainLayout wrapper */}
+        <Route path="/" element={<MainLayout />}>
+          {/* Define your routes here */}
+          <Route index element={<HomePage />} />
+          <Route path="/newsevents" element={<NewsEvents />} />
+          <Route path="/news/:id" element={<NewsDetail />} />
+          <Route path="/contact" element={<Contact />} />
 
-        <Route path="/committee" element={<Committee />} />
-        <Route path="/advisory" element={<Advisory />} />
-        <Route path="/ourteam" element={<OurTeam />} />
+          {/* About Us routes */}
 
-        {/* Achievements routes */}
+          <Route path="/committee" element={<Committee />} />
+          <Route path="/advisory" element={<Advisory />} />
+          <Route path="/ourteam" element={<OurTeam />} />
 
-        <Route path="/award" element={<Award />} />
-        <Route path="/otherachievement" element={<OtherAchievement />} />
+          {/* Achievements routes */}
 
-        {/* Programs routes */}
+          <Route path="/award" element={<Award />} />
+          <Route path="/otherachievement" element={<OtherAchievement />} />
 
-        <Route path="/biodiversityprogram" element={<BiodiversityProgram />} />
-        <Route path="/humanitarianprogram" element={<HumanitarianProgram />} />
-        <Route
-          path="/cowsanctuariesinitiative"
-          element={<CowSanctuariesInitiative />}
-        />
-        <Route
-          path="/cleanergreenernepalmovement"
-          element={<CleanerGreenerNepalMovement />}
-        />
-        <Route
-          path="/touristroutedevelopment"
-          element={<TouristRouteDevelopment />}
-        />
+          {/* Programs routes */}
 
-        {/* Gallery routes */}
+          <Route
+            path="/biodiversityprogram"
+            element={<BiodiversityProgram />}
+          />
+          <Route
+            path="/humanitarianprogram"
+            element={<HumanitarianProgram />}
+          />
+          <Route
+            path="/cowsanctuariesinitiative"
+            element={<CowSanctuariesInitiative />}
+          />
+          <Route
+            path="/cleanergreenernepalmovement"
+            element={<CleanerGreenerNepalMovement />}
+          />
+          <Route
+            path="/touristroutedevelopment"
+            element={<TouristRouteDevelopment />}
+          />
 
-        <Route path="/gallery/photo" element={<PhotoGallery />} />
-        <Route path="/gallery/video" element={<VideoGallery />} />
-      </Route>
+          {/* Gallery routes */}
+
+          <Route path="/gallery/photo" element={<PhotoGallery />} />
+          <Route path="/gallery/video" element={<VideoGallery />} />
+        </Route>
+      </>
     )
   );
 

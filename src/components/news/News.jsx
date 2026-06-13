@@ -1,12 +1,32 @@
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import newsData from "../../data/newsData";
+import { getNews, normalizeApiNewsItem } from "../../apis/news";
 
 const News = () => {
+  const [news, setNews] = useState(newsData);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const loadNews = async () => {
+      const apiNews = await getNews();
+      if (!mounted || !Array.isArray(apiNews) || apiNews.length === 0) return;
+      setNews(apiNews.map(normalizeApiNewsItem));
+    };
+
+    loadNews();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   return (
     <section className="wpb_row row-fluid section-padd bg-light">
       <div className="container">
-        <div className="section-head text-center mb-4">
-          <div className="section-head text-center mb-4 d-flex justify-content-around align-items-center">
+        <div className="section-head  mb-4">
+          <div className="section-head text-center mb-4 d-flex justify-content-between align-items-center">
             <h2 className="mb-0 ">Latest News & Updates</h2>
             <span>
               <Link
@@ -24,9 +44,9 @@ const News = () => {
         </div>
 
         <div className="row">
-          {newsData
-            .slice(-3)
-            .reverse()
+          {[...news]
+            .sort((a, b) => new Date(b.date) - new Date(a.date))
+            .slice(0, 3)
             .map((newsItem) => (
               <div key={newsItem.id} className="col-sm-6 col-md-4 mb-4">
                 <div className="blog-card text-left border rounded shadow-sm">
@@ -36,10 +56,12 @@ const News = () => {
                   >
                     <img
                       src={
-                        newsItem.image ? newsItem.image[0] : "/images/logo.png"
+                        newsItem.image && newsItem.image.length > 0
+                          ? newsItem.image[0]
+                          : "/images/logo.png"
                       }
                       alt={newsItem.title}
-                      className="w-100 h-auto object-cover"
+                      className="w-100 h-100 object-fit-cover"
                     />
                   </div>
                   <div className="blog-card-text-area p-3">

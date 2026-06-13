@@ -447,6 +447,11 @@ h6 {
 
 p {
   margin: 0 0 20px;
+}
+
+/* Scope justified paragraphs to main content only */
+.entry-content p,
+.site-content p {
   text-align: justify;
 }
 
@@ -579,7 +584,7 @@ a.the-title:hover {
 }
 
 .section-padd {
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
 .section-padd-2 {
@@ -1143,9 +1148,9 @@ a {
   color: #00387a;
   text-decoration: none;
 }
-a:visited {
+/* a:visited {
   color: #00387a;
-}
+} */
 a:hover,
 a:focus,
 a:active {
@@ -1259,6 +1264,33 @@ ul.info-list.info_on_right_side li:last-child {
   -moz-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
+}
+
+.site-header.header-fixed.header-transparent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  z-index: 999;
+}
+
+.site-header.header-fixed.header-transparent .main-header-top {
+  background: transparent;
+}
+
+.site-header.header-fixed.header-transparent .main-navigation > ul > li > a {
+  color: #ffffff;
+}
+
+.site-header.header-fixed.header-transparent .main-navigation ul ul {
+  background-color: rgba(8, 20, 38, 0.96);
+}
+
+.site-header.header-fixed.header-transparent .main-navigation ul ul a {
+  color: #ffffff;
 }
 
 .main-navigation ul {
@@ -2004,11 +2036,37 @@ Default Section Title Area CSS
   color: var(--whiteColor);
 }
 .newsletter-form .news-btn {
-  width: 100%;
-  padding: 10px 15px;
+  width: auto; /* intrinsic size on larger viewports */
+  min-width: 140px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* prevent label wrap */
+  border-radius: 8px;
+  height: 40px;
+  line-height: 1;
 }
 .newsletter-form .news-btn:hover {
   background-color: var(--blackColor);
+}
+
+/* Footer: place subscribe button directly below the input (stacked) */
+.site-footer .widget_mc4wp_form_widget .row.al-content-center {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 10px;
+}
+.site-footer .widget_mc4wp_form_widget .col-7,
+.site-footer .widget_mc4wp_form_widget .col-5 {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+.site-footer .widget_mc4wp_form_widget .news-btn {
+  width: 100% !important;
+  min-width: 0 !important;
 }
 /*--------------------------------------------------------------
 ## Header Mobile
@@ -2036,10 +2094,21 @@ Default Section Title Area CSS
     display: block;
   }
 
+  .site-header.header-fixed.header-transparent .header_mobile {
+    position: relative;
+    z-index: 1000;
+  }
+
   .header_mobile .mlogo_wrapper {
     position: relative;
     background: #fff;
     padding: 22px 35px 22px 35px;
+  }
+
+  .site-header.header-fixed.header-transparent .header_mobile .mlogo_wrapper {
+    background: rgba(8, 20, 38, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .header_mobile .mlogo_wrapper .mobile_logo {
@@ -2846,6 +2915,8 @@ Index 01 Blog Area CSS
 }
 .blog-card .blog-card-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: 0.5s ease-in-out;
 }
 .blog-card .blog-card-text-area {
@@ -2904,6 +2975,153 @@ Index 01 Blog Area CSS
 }
 .blog-card:hover .blog-card-img img {
   transform: scale(1.1) rotate(2deg);
+}
+
+/* News Detail Newspaper style */
+.news-detail-container {
+  background: #f3efe5;
+}
+.news-paper-shell {
+  max-width: 1180px;
+  background: #faf6ee;
+  border: 1px solid #ddd5c9;
+  padding: 3rem;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.08);
+}
+.news-paper-masthead {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #ddd5c9;
+}
+.newspaper-brand {
+  color: #4f3926;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.newspaper-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25rem;
+}
+.newspaper-date {
+  font-size: 0.95rem;
+  color: #7e6e5f;
+}
+.news-back-link {
+  color: #3c3022;
+  font-weight: 600;
+  border-bottom: 1px dashed #3c3022;
+}
+.news-back-link:hover {
+  color: #8a4b19;
+}
+.article-category {
+  display: inline-block;
+  border: 1px solid #3c3022;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3c3022;
+}
+.article-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.08;
+  margin-bottom: 0.8rem;
+}
+.article-meta {
+  font-size: 0.9rem;
+  color: #70655b;
+  margin-bottom: 1.5rem;
+}
+
+.news-detail-image-fallback {
+  border: 1px solid #ddd5c9;
+  border-radius: 0.5rem;
+  background: #fff;
+  overflow: hidden;
+}
+.news-detail-gallery {
+  padding: 1rem;
+}
+.news-detail-gallery img,
+.news-detail-image-fallback img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.news-detail-gallery .react-photo-album--photo img {
+  object-fit: cover;
+}
+.article-body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #27221e;
+  font-size: 1.4rem;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+.newspaper-columns {
+  column-count: 2;
+  column-gap: 3rem;
+  column-rule: 1px solid #e6d9c7;
+}
+.article-body p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+.news-sidebar {
+  background: #fdf9f2;
+}
+.sidebar-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3c3022;
+}
+.related-news-list {
+  margin: 0;
+  padding: 0;
+}
+.related-news-item {
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid #efe5d7;
+}
+.related-news-item:last-child {
+  border-bottom: none;
+}
+.related-news-link {
+  color: #23201d;
+  font-weight: 600;
+  text-decoration: none;
+}
+.related-news-link:hover {
+  color: #8a4b19;
+}
+@media (max-width: 991px) {
+  .news-paper-shell {
+    padding: 2rem;
+  }
+  .newspaper-columns {
+    column-count: 1;
+    column-rule: none;
+  }
+}
+@media (max-width: 767px) {
+  .news-paper-shell {
+    padding: 1.5rem;
+  }
+  .newspaper-title {
+    font-size: 2rem;
+  }
+  .article-category {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
 }
 /*--------------------------------------------------------------
 ## Comments
@@ -3301,6 +3519,14 @@ Index 01 Blog Area CSS
     padding: 0 50px;
   }
 
+  .testi-slider {
+    margin: 0;
+  }
+
+  .testi-slider .testi-item {
+    margin: 0;
+  }
+
   .boxed-content .section-padd {
     padding: 50px;
   }
@@ -3624,7 +3850,7 @@ object {
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
   overflow: hidden;
-  height: 35rem;
+  min-height: 35rem; /* use min-height so content can expand/contract on small screens */
 }
 .service-box-padd {
   padding: 35px !important;
@@ -4411,7 +4637,9 @@ a .service-box {
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  top: -105px;
+  /* vertically center arrows relative to the slider */
+  top: 50%;
+  transform: translateY(-50%);
   right: 15px;
 }
 .testi-slider .slick-arrow i {
@@ -4419,12 +4647,128 @@ a .service-box {
   display: block;
 }
 .testi-slider .slick-arrow.prev-nav {
-  right: 70px;
+  left: 15px;
+  right: auto;
 }
 .testi-slider .slick-arrow:hover {
   border-color: var(--mainColor);
   background: var(--mainColor);
   color: #fff;
+}
+
+/* Mobile: center slick dots for testimonial/team sliders */
+@media (max-width: 767px) {
+  .testi-slider {
+    margin: 0; /* avoid negative gutters on small screens */
+  }
+  .testi-slider .slick-dots {
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 12px 0 0 !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+  .testi-slider .slick-dots li {
+    margin: 0 6px !important;
+  }
+  /* Make slick arrows visible and positioned for mobile */
+  .testi-slider .slick-arrow {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 34px !important;
+    font-size: 20px !important;
+    right: 8px !important;
+    border-radius: 4px !important;
+    opacity: 0.95;
+  }
+  .testi-slider .slick-arrow.prev-nav {
+    left: 8px !important;
+    right: auto !important;
+  }
+  .testi-slider .slick-arrow.next-nav {
+    right: 8px !important;
+    left: auto !important;
+  }
+  /* Center text inside testimonial/team cards on small screens */
+  .testi-item .testi-head,
+  .testi-item .testi-content,
+  .member-item .mem-info {
+    text-align: center !important;
+  }
+  .testi-item .testi-head img {
+    float: none !important;
+    display: block !important;
+    margin: 0 auto 12px !important;
+    max-width: 80px !important;
+    height: auto !important;
+  }
+  .testi-item .testi-content p {
+    margin-top: 12px !important;
+  }
+}
+
+/* Tablet adjustments: keep arrows visible and centered for widths under 992px */
+@media (max-width: 991px) {
+  .testi-slider {
+    margin: 0; /* remove negative gutters */
+  }
+  .testi-slider .slick-arrow {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 38px !important;
+    height: 38px !important;
+    line-height: 36px !important;
+    font-size: 18px !important;
+    right: 12px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+  }
+  .testi-slider .slick-arrow.prev-nav {
+    left: 12px !important;
+    right: auto !important;
+  }
+  .testi-slider .slick-arrow.next-nav {
+    right: 12px !important;
+    left: auto !important;
+  }
+}
+
+/* Strong overrides to ensure arrows are visible and card text centers */
+.member-item .mem-info,
+.member-item .mem-info h5,
+.member-item .mem-info h5 span {
+  text-align: center !important;
+}
+.testi-slider {
+  overflow: visible !important;
+}
+.testi-slider .slick-arrow {
+  z-index: 9999 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  color: var(--mainColor) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+}
+.testi-slider .slick-arrow.prev-nav {
+  left: 12px !important;
+  right: auto !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Force h5 to center its inline and block children reliably (names + role spans) */
+.member-item .mem-info h5 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .testi-item-2 {
@@ -4631,7 +4975,7 @@ a .service-box {
 .member-item .mem-info {
   padding: 28px 30px 8px;
   background: #fff;
-  text-align: center;
+  text-align: center !important;
 }
 .member-item .mem-info h5 span {
   display: block;
@@ -5113,15 +5457,15 @@ div.line-chart .chart-legend li {
 @media (max-width: 991px) {
   .section-padd,
   .section-padd-2 {
-    padding: 70px 0;
+    padding: 60px 0;
   }
 
   .section-padd-top {
-    padding-top: 70px;
+    padding-top: 60px;
   }
 
   .sectionb-padd-bot {
-    padding-bottom: 70px;
+    padding-bottom: 60px;
   }
 
   .step-box img {
@@ -5168,79 +5512,82 @@ div.line-chart .chart-legend li {
 }
 @media (max-width: 600px) {
   .team-slider .member-item img {
-    width: 100%;
-  }
-}
-
-/*Equal height*/
-@media only screen and (min-width: 768px) {
-  .wpb_row.row-o-equal-height .column_container {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
+    width: 100% !important;
+    display: block !important;
+    min-width: 0 !important;
+    height: auto !important;
   }
 
-  .wpb_row.row-o-equal-height > .row {
-    width: 100%;
-    margin: 0;
-  }
+  /*Equal height*/
+  @media only screen and (min-width: 768px) {
+    .wpb_row.row-o-equal-height .column_container {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;
+    }
 
-  .wpb_row.row-o-equal-height .row,
-  .wpb_row.row-flex {
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-  }
+    .wpb_row.row-o-equal-height > .row {
+      width: 100%;
+      margin: 0;
+    }
 
-  _::-webkit-full-page-media,
-  _:future,
-  :root .wpb_row.row-o-equal-height .row {
-    display: -webkit-box;
-    display: -webkit-flex;
-  }
+    .wpb_row.row-o-equal-height .row,
+    .wpb_row.row-flex {
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;
+    }
 
-  .wpb_row.row-o-equal-height .column_container {
-    -moz-box-align: stretch;
-    align-items: stretch;
-  }
+    _::-webkit-full-page-media,
+    _:future,
+    :root .wpb_row.row-o-equal-height .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+    }
 
-  .wpb_row.row-o-content-middle .column_container .column-inner {
-    -moz-box-pack: center;
-    justify-content: center;
-  }
+    .wpb_row.row-o-equal-height .column_container {
+      -moz-box-align: stretch;
+      align-items: stretch;
+    }
 
-  .wpb_row.row-flex .column_container:not(.bg-center) .column-inner {
-    -moz-box-flex: 1;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    background-position: top !important;
-  }
+    .wpb_row.row-o-content-middle .column_container .column-inner {
+      -moz-box-pack: center;
+      justify-content: center;
+    }
 
-  .wpb_row.row-o-content-bottom .column_container .column-inner {
-    -moz-box-pack: end;
-    justify-content: flex-end;
-  }
+    .wpb_row.row-flex .column_container:not(.bg-center) .column-inner {
+      -moz-box-flex: 1;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      background-position: top !important;
+    }
 
-  .wpb_row.row-o-content-top .column_container .column-inner {
-    -moz-box-pack: start;
-    justify-content: flex-start;
+    .wpb_row.row-o-content-bottom .column_container .column-inner {
+      -moz-box-pack: end;
+      justify-content: flex-end;
+    }
+
+    .wpb_row.row-o-content-top .column_container .column-inner {
+      -moz-box-pack: start;
+      justify-content: flex-start;
+    }
   }
 }
 /*--------------------------------------------------------------
@@ -5292,6 +5639,15 @@ div.line-chart .chart-legend li {
 
 .main-footer {
   padding: 50px 0 50px;
+}
+
+/* Ensure footer copyright is centered on small screens */
+@media (max-width: 480px) {
+  .site-footer .copyright p {
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 .main-footer h4 {
   color: #fff;
@@ -5579,6 +5935,14 @@ div.line-chart .chart-legend li {
   .simple-box {
     width: 100%;
     margin-bottom: 30px;
+  }
+
+  .testi-slider {
+    margin: 0 !important;
+  }
+
+  .testi-slider .testi-item {
+    margin: 0 !important;
   }
 
   .padding-box-60 {
@@ -5893,5 +6257,395 @@ div.line-chart .chart-legend li {
   }
   .banner-content .btn {
     padding: 13px 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-padd,
+  .section-padd-2 {
+    padding: 40px 0;
+  }
+
+  .section-padd-top {
+    padding-top: 40px;
+  }
+
+  .sectionb-padd-bot {
+    padding-bottom: 40px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Additional Mobile Refinements
+--------------------------------------------------------------*/
+@media (max-width: 767px) {
+  /* ---- Symmetrical Mobile Typography ---- */
+  h1 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 12px !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+  }
+  h2 {
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+  }
+  h3 {
+    font-size: 19px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+  }
+  h4 {
+    font-size: 17px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+  }
+  h5 {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 6px !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+  }
+  h6 {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 6px !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+  }
+  /* Scope typography overrides — exclude navbar items */
+  p:not(.mobile_mainmenu p):not(.main-navigation p),
+  span:not(.mobile_mainmenu span):not(.main-navigation span):not(
+      .dropdown-toggle span
+    ),
+  li:not(.mobile_mainmenu li):not(.main-navigation li),
+  a:not(.mobile_mainmenu a):not(.main-navigation a):not(.mlogo_wrapper a) {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+    font-weight: 400 !important;
+  }
+
+  /* ---- Restore correct mobile navbar item styles ---- */
+  .header_mobile .mobile_nav .mobile_mainmenu li a {
+    padding: 10px 20px 10px 16px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    display: block !important;
+  }
+  .header_mobile .mobile_nav .mobile_mainmenu .dropdown-toggle {
+    padding: 10px 20px 10px 16px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    cursor: pointer;
+  }
+  .header_mobile .mobile_nav .mobile_mainmenu .dropdown-toggle span {
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+  }
+  .header_mobile .mobile_nav .mobile_mainmenu .sub-menu li a {
+    padding-left: 28px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+
+  /* Retain strong tag weight for bold body callouts */
+  strong,
+  b {
+    font-weight: 700 !important;
+  }
+
+  /* ---- Symmetrical Section Spacing & Inner Gaps ---- */
+  .section-padd,
+  .section-padd-2,
+  .section-padd-top,
+  .section-padd-bot,
+  section,
+  .events-modern-section,
+  .events-metrics-section,
+  .aboutus-section,
+  .programs-section {
+    padding: 36px 16px !important;
+    margin: 0 !important;
+  }
+
+  /* Standardize inner elements gaps — exclude navbar rows */
+  .row:not(.mlogo_wrapper .row):not(.main-header .row) {
+    row-gap: 20px !important;
+  }
+
+  /* Section heads spacing consistency and symmetry */
+  .section-head,
+  .default-section-title,
+  .default-section-title-middle,
+  .aboutus-title {
+    margin-bottom: 24px !important;
+    padding-bottom: 0 !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .section-head h2,
+  .default-section-title h3,
+  .aboutus-title h2 {
+    font-size: 22px !important;
+    word-break: break-word;
+    text-align: left !important;
+  }
+
+  .section-head h6,
+  .default-section-title span,
+  .aboutus-title h6 {
+    text-align: left !important;
+  }
+
+  /* --- Symmetrize Program boxes --- */
+  .service-box {
+    padding: 24px 20px 24px !important;
+    height: auto !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .service-box i,
+  .service-box img {
+    left: 0 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    display: block !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* ---- Contact page: make card icons line up on narrow screens ---- */
+  .contact-card {
+    padding: 20px 16px 20px 74px !important;
+    margin-top: 16px !important;
+  }
+  .contact-card i {
+    left: 12px !important;
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  .contact-card h5 {
+    font-size: 16px !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* ---- Contact form area ---- */
+  .contact-form-text-area {
+    padding: 20px 16px !important;
+  }
+
+  /* ---- iframe: force responsive width ---- */
+  .google-map iframe {
+    width: 100% !important;
+    height: 240px !important;
+  }
+
+  /* ---- Uni banner (page headers on inner pages) ---- */
+  .uni-banner-text-area h1 {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+  .uni-banner-text-area {
+    padding-top: 44px !important;
+    padding-bottom: 44px !important;
+  }
+
+  /* ---- Paragraph alignment (global override) ---- */
+  p {
+    text-align: left !important;
+  }
+
+  /* ---- Main footer alignment adjustments ---- */
+  .main-footer {
+    padding: 40px 16px !important;
+    text-align: left !important;
+  }
+  .main-footer .widget {
+    margin-bottom: 30px !important;
+  }
+  .main-footer .widget_media_image,
+  .main-footer img#footer-logo {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  .main-footer .widget ul li,
+  .main-footer .widget p,
+  .main-footer .widget a {
+    text-align: left !important;
+  }
+  .main-footer .ot-socials {
+    text-align: left !important;
+    margin-top: 20px !important;
+    display: flex !important;
+    gap: 8px !important;
+  }
+  .main-footer .ot-socials a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+  }
+
+  /* ---- Events & Metrics alignment adjustments ---- */
+  .events-metrics-section {
+    text-align: center !important;
+  }
+  .events-metrics-section .events-metric-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .events-metric-copy h3,
+  .events-metric-copy p {
+    text-align: center !important;
+  }
+
+  /* ---- Symmetrical Mobile Header & Toggle Alignment ---- */
+  .header_mobile .mlogo_wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 16px !important;
+    height: 72px !important;
+  }
+  .header_mobile .mlogo_wrapper .row {
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .header_mobile .mlogo_wrapper .col-md-12 {
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .header_mobile .mlogo_wrapper:after,
+  .header_mobile .mlogo_wrapper:before {
+    display: none !important; /* Remove float clearing spaces */
+  }
+  .header_mobile .mlogo_wrapper .mobile_logo {
+    float: none !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  #mmenu_toggle {
+    float: none !important;
+    margin: 0 !important;
+    position: relative !important;
+    top: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 24px !important;
+    width: 28px !important;
+    padding: 0 !important;
+  }
+  #mmenu_toggle button {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+  }
+}
+
+/* Sub-480px: tiny phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+  }
+  h2 {
+    font-size: 20px !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+  }
+  h3 {
+    font-size: 18px !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+  }
+  h4 {
+    font-size: 16px !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+  }
+  /* Scope typography — exclude mobile navbar items */
+  p:not(.mobile_mainmenu p):not(.main-navigation p),
+  span:not(.mobile_mainmenu span):not(.main-navigation span):not(
+      .dropdown-toggle span
+    ),
+  li:not(.mobile_mainmenu li):not(.main-navigation li),
+  a:not(.mobile_mainmenu a):not(.main-navigation a):not(.mlogo_wrapper a) {
+    font-size: 13px !important;
+    text-align: left !important;
+    font-weight: 400 !important;
+  }
+
+  /* Retain bold elements on tiny screens */
+  strong,
+  b {
+    font-weight: 700 !important;
+  }
+
+  /* Ensure containers never overflow the viewport */
+  .container,
+  .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .section-padd,
+  .section-padd-2,
+  section,
+  .events-modern-section,
+  .events-metrics-section,
+  .aboutus-section,
+  .programs-section {
+    padding: 28px 12px !important;
+  }
+
+  /* Smaller inner layout gaps — exclude navbar rows */
+  .row:not(.mlogo_wrapper .row):not(.main-header .row) {
+    row-gap: 16px !important;
+  }
+
+  /* Contact cards: stack icon closer on tiny screens */
+  .contact-card {
+    padding: 16px 12px 16px 66px !important;
+  }
+  .contact-card i {
+    left: 10px !important;
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 16px !important;
   }
 }

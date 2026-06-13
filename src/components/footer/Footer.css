@@ -17,3 +17,77 @@ p {
 #email-link:hover {
   color: #f26522;
 }
+
+/* =================== Footer Responsive ========================= */
+@media (max-width: 991px) {
+  img#footer-logo {
+    height: 90px;
+  }
+  .main-footer {
+    padding: 42px 0 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  img#footer-logo {
+    height: 76px;
+  }
+  .qr-code {
+    width: 96px;
+  }
+  .main-footer {
+    padding: 36px 0 24px;
+  }
+  /* Stack footer columns nicely with spacing */
+  .main-footer .widget {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  img#footer-logo {
+    height: 64px;
+  }
+  .qr-code {
+    width: 80px;
+  }
+  .newsletter-form .row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .newsletter-form .col-7,
+  .newsletter-form .col-5 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .newsletter-form .news-btn {
+    width: 100%;
+    white-space: nowrap;
+  }
+  .copyright {
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .copyright p {
+    font-size: 13px;
+    margin: 0;
+    padding-top: 12px;
+    text-align: center !important;
+    word-break: break-word;
+  }
+}
+
+/* Ensure site-footer copyright is centered on small viewports (redundant-safe rule) */
+@media (max-width: 480px) {
+  .site-footer .copyright p {
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

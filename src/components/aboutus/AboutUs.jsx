@@ -1,125 +1,152 @@
+import "./AboutUs.css";
+
 const AboutUs = () => {
   return (
-    <>
-      <section className="wpb_row row-fluid section-padd row-has-fill row-o-equal-height row-o-content-middle row-flex bg-light">
-        <div className="container">
-          <div className="row">
-            <div className="wpb_column column_container col-sm-12">
-              <div className="column-inner">
-                <div className="wpb_wrapper">
-                  <div className="row wpb_row inner row-fluid row-o-equal-height row-o-content-middle row-flex">
-                    <div className="wpb_column column_container col-sm-12 col-md-6 col-has-fill ">
-                      <div className="column-inner">
-                        <div className="wpb_wrapper">
-                          <div class="composition">
-                            <img
-                              srcset="/images/about/heritage.jpg 300w, /images/about/heritage.jpg 1000w"
-                              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                              alt="Photo 1"
-                              class="composition__photo composition__photo--p1"
-                              src="/images/about/heritage.jpg"
-                            />
+    <section className="aboutus-section">
+      <div className="container">
+        <div className="aboutus-inner">
+          <div className="aboutus-left">
+            <div className="artboard" aria-hidden="true"></div>
+            <div
+              className="composition"
+              role="img"
+              aria-label="Heritage photos"
+            >
+              <img
+                srcSet=" /images/gallery/g28.jpeg 300w,  /images/gallery/g28.jpeg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Stupa and heritage"
+                className="composition__photo composition__photo--p1"
+                src=" /images/gallery/g28.jpeg"
+              />
 
-                            <img
-                              srcset="/images/about/heritage.jpg 300w, /images/about/heritage.jpg 1000w"
-                              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                              alt="Photo 2"
-                              class="composition__photo composition__photo--p2"
-                              src="/images/about/heritage.jpg"
-                            />
+              <img
+                srcSet="/images/programs/cleaner-greener.jpg 300w, /images/programs/cleaner-greener.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Cleaner Greener"
+                className="composition__photo composition__photo--p2"
+                src="/images/programs/cleaner-greener.jpg"
+              />
+              <img
+                srcSet="/images/about/community.jpg 300w, /images/about/community.jpg 1000w"
+                sizes="(max-width: 60em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Cow sanctuary"
+                className="composition__photo composition__photo--p4"
+                src="/images/about/community.jpg"
+              />
+              <img
+                srcSet="/images/about/heritage.jpg 300w, /images/about/heritage.jpg 1000w"
+                sizes="(max-width: 60em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Biodiversity program"
+                className="composition__photo composition__photo--p3"
+                src="/images/about/heritage.jpg"
+              />
+            </div>
+          </div>
 
-                            <img
-                              srcset="/images/about/heritage.jpg 300w, /images/about/heritage.jpg 1000w"
-                              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
-                              alt="Photo 3"
-                              class="composition__photo composition__photo--p3"
-                              src="/images/about/heritage.jpg"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className=" wpb_column column_container col-sm-12 col-md-6">
-                      <div className="column-inner">
-                        <div className="wpb_wrapper">
-                          {/* <div className="empty_space_60 lg-hidden ">
-                            <span className="empty_space_inner"></span>
-                          </div> */}
+          <div className="aboutus-right">
+            <div className="aboutus-title">
+              <h2>WHO WE ARE</h2>
+              <h6 className="aboutus-subtitle">
+                Empowering Communities, Preserving Heritage
+              </h6>
+            </div>
 
-                          <div className="section-head padding-box-2 ">
-                            <h2>
-                              <span className="">WHO WE ARE</span>
-                            </h2>
-                            <h6 className="section-title">
-                              Empowering Communities, Preserving Heritage
-                            </h6>
-                          </div>
+            <div className="aboutus-description">
+              <p className="aboutus-intro">
+                Shubhayatra Nepal is a dedicated organization working to protect
+                Nepal's cultural and natural heritage while uplifting
+                communities through innovative programs.
+              </p>
+            </div>
 
-                          <div className="wpb_text_column wpb_content_element padding-box-2 text-dark">
-                            <div className="wpb_wrapper">
-                              <p>
-                                Shubhayatra Nepal is a dedicated organization
-                                working to protect Nepal&apos;s cultural and
-                                natural heritage while uplifting communities
-                                through innovative programs.
-                              </p>
-                            </div>
-                            <div className="why-we-text-list">
-                              <i className="flaticon-earth-globe"></i>
-                              <h4>Our Mission:</h4>
-                              <p>
-                                To inspire change by fostering cultural
-                                preservation, environmental conservation, and
-                                sustainable development across Nepal.
-                              </p>
-                              <ul>
-                                <li>
-                                  Preserving Nepal’s cultural and spiritual
-                                  landmarks.
-                                </li>
-                                <li>
-                                  Advancing environmental sustainability through
-                                  clean-up drives and waste management.
-                                </li>
-                                <li>
-                                  Empowering communities with education and
-                                  resources for a better future.
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
+            <div className="mission">
+              <div className="mission-title">
+                <h4>Our Mission:</h4>
+              </div>
+              <p className="mission-copy">
+                To inspire change by fostering cultural preservation,
+                environmental conservation, and sustainable development across
+                Nepal.
+              </p>
 
-                          {/* <div className="wpb_text_column wpb_content_element paddtop-75 padding-box-2 info-box text-dark">
-                            <div className="wpb_wrapper">
-                              <div className="sign">
-                                <p>
-                                  <img
-                                    className="alignnone size-full wp-image-1087"
-                                    src="/images/principal-sign.png"
-                                    alt=""
-                                    width="79"
-                                    height="49"
-                                  />
-                                </p>
-                                <h5>Sanjeev Bhandari</h5>
-                                <p>President</p>
-                              </div>
-                            </div>
-                          </div> */}
-                          <div className="empty_space_60 lg-hidden">
-                            <span className="empty_space_inner"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+              <div className="feature-list">
+                <div className="feature-row">
+                  <div className="feature-icon">
+                    <svg
+                      className="aboutus-inline-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.55"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M3 10h18" />
+                      <path d="M5 10v6" />
+                      <path d="M9 10v6" />
+                      <path d="M15 10v6" />
+                      <path d="M19 10v6" />
+                      <path d="M2.5 19h19" />
+                      <path d="M12 4l9 4H3l9-4z" />
+                    </svg>
+                  </div>
+                  <div className="feature-text">
+                    <strong>Cultural Heritage Preservation</strong>
+                  </div>
+                </div>
+
+                <div className="feature-row">
+                  <div className="feature-icon">
+                    <svg
+                      className="aboutus-inline-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.55"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M8.6 14.8c4.1.4 6.8-2.2 7.4-6.9-3.7-.2-6.5 1.6-7.4 6.9z" />
+                      <path d="M9.4 14.2c1.5-.8 2.8-2 3.9-3.6" />
+                    </svg>
+                  </div>
+                  <div className="feature-text">
+                    <strong>Environmental Conservation</strong>
+                  </div>
+                </div>
+
+                <div className="feature-row">
+                  <div className="feature-icon">
+                    <svg
+                      className="aboutus-inline-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.55"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="9" cy="9" r="2.2" />
+                      <circle cx="15.4" cy="9" r="2.2" />
+                      <path d="M4.8 17c.7-2.2 2.5-3.4 4.2-3.4s3.5 1.2 4.2 3.4" />
+                      <path d="M11.2 17c.6-2.2 2.4-3.4 4.2-3.4 1.7 0 3.4 1.1 4.1 3.4" />
+                    </svg>
+                  </div>
+                  <div className="feature-text">
+                    <strong>Community Empowerment</strong>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
