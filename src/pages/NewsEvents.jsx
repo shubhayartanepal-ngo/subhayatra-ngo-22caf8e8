@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import newsData from "../data/newsData";
 import { Link } from "react-router-dom";
+import { getNews, normalizeApiNewsItem } from "../apis/news";
 
 const NewsEvents = () => {
-  // Sort newsData by date (assuming newsItem.date exists and is ISO format)
-  const sortedNews = [...newsData].sort(
+  const [news, setNews] = useState(newsData);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const loadNews = async () => {
+      const apiNews = await getNews();
+      if (!mounted || !Array.isArray(apiNews) || apiNews.length === 0) return;
+      setNews(apiNews.map(normalizeApiNewsItem));
+    };
+
+    loadNews();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const sortedNews = [...news].sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
 
@@ -18,7 +36,7 @@ const NewsEvents = () => {
           </h6>
         </div>
         <div className="row">
-          {sortedNews.reverse().map((newsItem) => (
+          {sortedNews.map((newsItem) => (
             <div key={newsItem.id} className="col-sm-6 col-md-4 mb-4">
               <div className="blog-card text-left border rounded shadow-sm">
                 <div
@@ -27,7 +45,9 @@ const NewsEvents = () => {
                 >
                   <img
                     src={
-                      newsItem.image ? newsItem.image[0] : "/images/logo.png"
+                      newsItem.image && newsItem.image.length > 0
+                        ? newsItem.image[0]
+                        : "/images/logo.png"
                     }
                     alt={newsItem.title}
                     className="w-100 h-100 object-fit-cover"

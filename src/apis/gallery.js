@@ -1,8 +1,30 @@
 export async function getGallery() {
   try {
-    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/gallery`);
+    const baseUrl = String(import.meta.env.VITE_API_BASE_URL || "").replace(
+      /\/+$/,
+      ""
+    );
+    const res = await fetch(`${baseUrl}/v1/public/albums`);
     if (!res.ok) return [];
-    return await res.json();
+
+    const albums = await res.json();
+
+    let allMedia = [];
+    if (Array.isArray(albums)) {
+      albums.forEach((album) => {
+        if (Array.isArray(album.mediaList)) {
+          album.mediaList.forEach((media) => {
+            allMedia.push({
+              ...media,
+              albumId: album.id,
+              title: album.programName || media.fileName || "",
+              description: album.description,
+            });
+          });
+        }
+      });
+    }
+    return allMedia;
   } catch (err) {
     console.error("gallery api error", err);
     return [];
@@ -10,5 +32,11 @@ export async function getGallery() {
 }
 
 export function buildMediaUrl(filePath) {
-  return `${import.meta.env.VITE_API_IMAGE_URL}uploads/${filePath}`;
+  if (!filePath) return "";
+  const normalizedPath = String(filePath).replace(/^\/+/, "");
+  const baseImageUrl = String(import.meta.env.VITE_API_IMAGE_URL || "").replace(
+    /\/+$/,
+    ""
+  );
+  return `${baseImageUrl}/uploads/${encodeURI(normalizedPath)}`;
 }

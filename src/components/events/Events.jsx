@@ -1,31 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Events.css";
+import {
+  getEvents,
+  normalizeApiEventItem,
+  formatEventDate,
+} from "../../apis/events";
 
 const Events = () => {
-  const events = [
-    {
-      tag: "Community",
-      date: "Jun 12, 2026",
-      title: "Cultural Heritage Awareness Drive",
-      location: "Shivamthan, Arua, Kathmandu",
-      image: "/images/events/3.jpg",
-    },
-    {
-      tag: "Environment",
-      date: "Jun 28, 2026",
-      title: "Bagmati River Clean-up & Waste Management",
-      location: "Riverside Corridor, Kathmandu",
-      image: "/images/gallery/g11.jpeg",
-    },
-    {
-      tag: "Conference",
-      date: "Jul 14, 2026",
-      title: "Annual Sustainable Development Summit",
-      location: "City Center, Manigram, Tilottama-15",
-      image: "/images/events/yoga-lab.jpg",
-    },
-  ];
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getEvents()
+      .then((raw) => setEvents(raw.map(normalizeApiEventItem)))
+      .catch(() => setEvents([]))
+      .finally(() => setLoading(false));
+  }, []);
 
   const metrics = [
     { value: "+100", label: "Volunteers", icon: "people" },
@@ -45,26 +36,51 @@ const Events = () => {
             </div>
 
             <div className="events-modern-grid">
-              {events.map((item) => (
-                <article className="events-modern-card" key={item.title}>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="events-modern-image"
-                  />
-                  <div className="events-modern-body">
-                    <div className="events-modern-meta">
-                      <span className="events-modern-tag">{item.tag}</span>
-                      <span className="events-modern-date">{item.date}</span>
+              {loading ? (
+                [1, 2, 3].map((n) => (
+                  <article
+                    className="events-modern-card events-skeleton-card"
+                    key={n}
+                  >
+                    <div className="events-skeleton-image" />
+                    <div className="events-modern-body">
+                      <div className="events-modern-meta">
+                        <span className="events-skeleton-tag" />
+                        <span className="events-skeleton-date" />
+                      </div>
+                      <div className="events-skeleton-title" />
+                      <div className="events-skeleton-location" />
                     </div>
-                    <h4>{item.title}</h4>
-                    <p className="events-modern-location">{item.location}</p>
-                    <Link to="/newsevents" className="events-modern-link">
-                      Read More
-                    </Link>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                ))
+              ) : events.length === 0 ? (
+                <p className="events-empty-state">
+                  No upcoming events at the moment. Check back soon!
+                </p>
+              ) : (
+                events.map((item) => (
+                  <article className="events-modern-card" key={item.id}>
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="events-modern-image"
+                    />
+                    <div className="events-modern-body">
+                      <div className="events-modern-meta">
+                        <span className="events-modern-tag">Event</span>
+                        <span className="events-modern-date">
+                          {formatEventDate(item.date)}
+                        </span>
+                      </div>
+                      <h4>{item.title}</h4>
+                      <p className="events-modern-location">{item.location}</p>
+                      <Link to="/newsevents" className="events-modern-link">
+                        Read More
+                      </Link>
+                    </div>
+                  </article>
+                ))
+              )}
             </div>
             <div className="events-metrics-grid">
               {metrics.map((metric) => (

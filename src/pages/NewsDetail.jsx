@@ -4,14 +4,32 @@ import PhotoAlbum from "react-photo-album";
 import "lightbox2/dist/css/lightbox.min.css";
 import lightbox from "lightbox2";
 import newsData from "../data/newsData";
+import { getNews, normalizeApiNewsItem } from "../apis/news";
 
 const NewsDetail = () => {
   const { id } = useParams();
-  const newsItem = newsData.find((item) => item.id === parseInt(id, 10));
+  const [newsItems, setNewsItems] = useState(newsData);
+  const newsItem = newsItems.find((item) => item.id === parseInt(id, 10));
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
     lightbox.option({ resizeDuration: 200, wrapAround: true });
+  }, []);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const loadNews = async () => {
+      const apiNews = await getNews();
+      if (!mounted || !Array.isArray(apiNews) || apiNews.length === 0) return;
+      setNewsItems(apiNews.map(normalizeApiNewsItem));
+    };
+
+    loadNews();
+
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   useEffect(() => {
@@ -35,7 +53,7 @@ const NewsDetail = () => {
     return <p className="text-center">News article not found.</p>;
   }
 
-  const relatedNews = newsData
+  const relatedNews = newsItems
     .filter((item) => item.id !== newsItem.id)
     .slice(0, 5);
 

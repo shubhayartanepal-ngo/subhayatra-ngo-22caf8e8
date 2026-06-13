@@ -1,6 +1,26 @@
 import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { getContactInfo } from "../apis/contact";
 
 const Contact = () => {
+  const [contactInfo, setContactInfo] = useState({
+    location: "walling - 8 syangja/Tilottama- 5 Manigram",
+    email: "shubhayatran@gmail.com",
+    phoneNumber: "+977- 9856077385",
+  });
+
+  useEffect(() => {
+    getContactInfo().then((info) => {
+      if (info) {
+        setContactInfo({
+          location:
+            info.location || "walling - 8 syangja/Tilottama- 5 Manigram",
+          email: info.email || "shubhayatran@gmail.com",
+          phoneNumber: info.phoneNumber || "+977- 9856077385",
+        });
+      }
+    });
+  }, []);
   return (
     <div>
       <section className="uni-banner">
@@ -30,7 +50,7 @@ const Contact = () => {
                     href="https://goo.gl/maps/zZEtThmwqkPz2GTE7"
                     target="_blank"
                   >
-                    walling - 8 syangja/Tilottama- 5 Manigram
+                    {contactInfo.location}
                   </a>
                 </p>
               </div>
@@ -40,13 +60,8 @@ const Contact = () => {
                 <i className="fas fa-envelope"></i>
                 <h5>Our Email</h5>
                 <p>
-                  <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#c5ada0a9a9aa85a8a0a1bfaaeba6aaa8">
-                    <span
-                      className="__cf_email__"
-                      data-cfemail="afc7cac3c3c0efc2cacbd5c081ccc0c2"
-                    >
-                      shubhayatran@gmail.com
-                    </span>
+                  <a href={`mailto:${contactInfo.email}`}>
+                    {contactInfo.email}
                   </a>
                 </p>
               </div>
@@ -56,7 +71,10 @@ const Contact = () => {
                 <i className="fas fa-phone-alt"></i>
                 <h5>PHONE NUMBER</h5>
                 <p>
-                  <a href="tel:+44587154756"> +977- 9856077385</a>
+                  <a href={`tel:${contactInfo.phoneNumber}`}>
+                    {" "}
+                    {contactInfo.phoneNumber}
+                  </a>
                 </p>
               </div>
             </div>
